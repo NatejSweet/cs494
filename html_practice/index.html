@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="./main.js"></script>
+        <link rel="stylesheet" href="./style.css">
+        <title>My Website</title>
+        <meta charset="utf-8">
+        <style>
+            header {
+                background-color: #333;
+                color: white;
+                text-align: center;
+            }
+            main {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+            footer {
+                background-color: #333;
+                color: white;
+                text-align: center;
+            }
+            #dabutton {
+                background-color: #333;
+                color: white;
+            }
+            .input {
+                background-color: #333;
+                color: white;
+            }
+            p {
+                text-align: center;
+            }
+
+
+        </style>
+        <script>
+            console.log('hello world');
+            function handleClick() {
+                alert(document.getElementById('input').value);
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1> header 1</h1>
+        </header>
+        <main>
+            <div>
+                main div
+            </div>
+            <img src="#">
+            <p> this is paragraph</p>
+            <br>
+            <p>did you notice the break statement?
+                <br>
+                <b>this is bold</b>
+                <br>
+                <u>this is underlined</u>
+                <br>
+                <i>this is italic</i>
+                <br>
+                <s>this is strikethrough</s>
+
+            </p>
+
+            <br>
+            <a href="./home.html">wonder where this goes</a>
+            <br>
+            <button id='dabutton' onclick="handleClick()">button</button>
+            <input id='input' class='input' type="text">
+            <ul>
+                <li>unordered list item 1</li>
+                <li>unordered list item 2</li>
+                <li>unordered list item 3</li>
+            </ul>
+            <ol>
+                <li>ordered list item 1</li>
+                <li>ordered list item 2</li>
+                <li>ordered list item 3</li>
+            </ol>
+        </main>
+
+        <footer>
+            <h2>footer</h2>
+
+        </footer>
+
+    </body>
+</html>
