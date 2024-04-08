@@ -1,0 +1,75 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+main {
+  background-color: aqua;
+  flex: 1;
+}
+
+h1,
+table {
+  text-align: center;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Courier New", Courier, monospace;
+}
+
+p {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  animation: bounceSpin 2s linear infinite;
+}
+
+@keyframes bounceSpin {
+  0% {
+    transform: translateY(0%) translateX(0%) rotate(0deg);
+  }
+  8% {
+    transform: translateY(-25%) translateX(25%) rotate(90deg);
+  }
+  16% {
+    transform: translateY(-50%) translateX(50%) rotate(90deg);
+  }
+  24% {
+    transform: translateY(-25%) translateX(25%) rotate(90deg);
+  }
+  32% {
+    transform: translateY(0%) translateX(0%) (90deg);
+  }
+  40% {
+    transform: translateY(25%) translateX(-25%) rotate(90deg);
+  }
+  48% {
+    transform: translateY(50%) translateX(-50%) (90deg);
+  }
+  56% {
+    transform: translateY(25%) rotate(540deg);
+  }
+  64% {
+    transform: translateY(0%) rotate(630deg);
+  }
+  72% {
+    transform: translateY(-25%) translateX(50%) rotate(630deg);
+  }
+  80% {
+    transform: translateY(-50%) rotate(540deg);
+  }
+  88% {
+    transform: translateY(-25%) rotate(450deg);
+  }
+  96% {
+    transform: translateY(0%) rotate(360deg);
+  }
+  100% {
+    transform: translateY(0%) translateX(0%) rotate(270deg);
+  }
+}
