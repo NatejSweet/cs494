@@ -3,20 +3,27 @@ import {TableCell, TableRow} from '@mui/material';
 import { tableCellClasses } from '@mui/material/TableCell';
 
 export const StyledTableCell = styled(TableCell)(() => ({
-        [`&.${tableCellClasses.head}`]: {
+  [`&.${tableCellClasses.head}`]: {
+    width: 'auto',
+    height: 'auto',
+    minWidth: 7,
+  minHeight: 7,
     backgroundColor: 'black',
     color: 'white',
     fontSize: 16,
     textAlign: "center"
   },
   [`&.${tableCellClasses.body}`]: {
+    width: 'auto',
+    height: 'auto',
+    minWidth: 7,
+  minHeight: 7,
     fontSize: 14,
     textAlign: "center"
     },
   
 }));
-//TODO: This is likely affecting header row, investigate and/or fix
-export const StyledTableRow = styled(TableRow)(() => ({ //I think this is affecting the header row, but there are no visible changes
+export const StyledTableRow = styled(TableRow)(() => ({
   '&:nth-of-type(odd)': {
     backgroundColor: 'white',
   },
@@ -26,4 +33,6 @@ export const StyledTableRow = styled(TableRow)(() => ({ //I think this is affect
   '&:hover': {
     backgroundColor: 'lightblue',
   },
+  width: 'auto',
+  height: 'auto',
 }));
