@@ -1,6 +1,6 @@
 import { styled } from '@mui/system';
 
 export const StyledImage = styled('img')({
-  width: 'auto',
-  height: 'auto',
+  width: '100%',
+  height: '100%',
 });
