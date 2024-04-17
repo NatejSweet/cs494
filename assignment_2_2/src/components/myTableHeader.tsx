@@ -1,11 +1,11 @@
 import {TableHead} from '@mui/material'; 
-import MyTableRow from './myTableRow';
+import MyHeaderTableRow from './myHeaderTableRow';
 
 export default function MyTableHeader(props: { headers: string[] }) {
     return (
         <TableHead>
-                //TODO: remove prop drilling
-                <MyTableRow data={props.headers} />
+                {/* TODO: remove prop drilling */}
+                <MyHeaderTableRow data={props.headers} />
         </TableHead>
     )
 }

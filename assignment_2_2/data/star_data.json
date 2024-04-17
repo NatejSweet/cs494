@@ -1,0 +1,378 @@
+[
+    {
+        "name": "Sun",
+        "distance_from_earth_ly": 0,
+        "size": "1.39 million km (109 times Earth's diameter)",
+        "mass": "1 Solar Mass",
+        "temperature": "5,500 °C (9,932 °F)",
+        "type": "G-type main-sequence star (Yellow Dwarf)"
+    },
+    {
+        "name": "Sirius",
+        "distance_from_earth_ly": 8.6,
+        "size": "2.02 Solar radii",
+        "mass": "2.02 Solar Masses",
+        "temperature": "9,940 K",
+        "type": "A-type main-sequence star (White Dwarf)"
+    },
+    {
+        "name": "Alpha Centauri",
+        "distance_from_earth_ly": 4.37,
+        "size": "1.227 Solar radii",
+        "mass": "1.1 Solar Masses",
+        "temperature": "5,790 K",
+        "type": "G-type main-sequence star (Yellow Dwarf)"
+    },
+    {
+        "name": "Proxima Centauri",
+        "distance_from_earth_ly": 4.24,
+        "size": "0.154 Solar radii",
+        "mass": "0.123 Solar Masses",
+        "temperature": "3,042 K",
+        "type": "Red Dwarf"
+    },
+    {
+        "name": "Barnard's Star",
+        "distance_from_earth_ly": 5.96,
+        "size": "0.144 Solar radii",
+        "mass": "0.144 Solar Masses",
+        "temperature": "3,134 K",
+        "type": "Red Dwarf"
+    },
+    {
+        "name": "Vega",
+        "distance_from_earth_ly": 25.04,
+        "size": "2.135 Solar radii",
+        "mass": "2.135 Solar Masses",
+        "temperature": "9,600 K",
+        "type": "A-type main-sequence star (White Dwarf)"
+    },
+    {
+        "name": "Canopus",
+        "distance_from_earth_ly": 310,
+        "size": "71.4 Solar radii",
+        "mass": "8.5 Solar Masses",
+        "temperature": "7,570 K",
+        "type": "F-type supergiant"
+    },
+    {
+        "name": "Arcturus",
+        "distance_from_earth_ly": 36.7,
+        "size": "25.4 Solar radii",
+        "mass": "1.1–1.7 Solar Masses",
+        "temperature": "4,290 K",
+        "type": "K-type giant"
+    },
+    {
+        "name": "Alpha Crucis",
+        "distance_from_earth_ly": 321,
+        "size": "7.49 Solar radii",
+        "mass": "7.4 Solar Masses",
+        "temperature": "12,100 K",
+        "type": "B-type subgiant"
+    },
+    {
+        "name": "Betelgeuse",
+        "distance_from_earth_ly": 643,
+        "size": "887 Solar radii",
+        "mass": "11.6–11.8 Solar Masses",
+        "temperature": "3,600 K",
+        "type": "M-type supergiant"
+    },
+    {
+        "name": "Rigel",
+        "distance_from_earth_ly": 860,
+        "size": "78.9 Solar radii",
+        "mass": "17 Solar Masses",
+        "temperature": "12,100 K",
+        "type": "B-type supergiant"
+    },
+    {
+        "name": "Antares",
+        "distance_from_earth_ly": 550,
+        "size": "680 Solar radii",
+        "mass": "12 Solar Masses",
+        "temperature": "3,600 K",
+        "type": "M-type supergiant"
+    },
+    {
+        "name": "Pollux",
+        "distance_from_earth_ly": 33.7,
+        "size": "8.8 Solar radii",
+        "mass": "1.8 Solar Masses",
+        "temperature": "4,860 K",
+        "type": "K-type giant"
+    },
+    {
+        "name": "Fomalhaut",
+        "distance_from_earth_ly": 25.1,
+        "size": "1.7 Solar radii",
+        "mass": "1.92 Solar Masses",
+        "temperature": "8,590 K",
+        "type": "A-type main-sequence star (White Dwarf)"
+    },
+    {
+        "name": "Deneb",
+        "distance_from_earth_ly": 1425,
+        "size": "203 Solar radii",
+        "mass": "19 Solar Masses",
+        "temperature": "8,525 K",
+        "type": "A-type supergiant"
+    },
+    {
+        "name": "Altair",
+        "distance_from_earth_ly": 16.7,
+        "size": "1.63 Solar radii",
+        "mass": "1.79 Solar Masses",
+        "temperature": "6,900 K",
+        "type": "A-type main-sequence star (White Dwarf)"
+    },
+    {
+        "name": "Regulus",
+        "distance_from_earth_ly": 79.3,
+        "size": "3.5 Solar radii",
+        "mass": "3.6 Solar Masses",
+        "temperature": "12,460 K",
+        "type": "B-type main-sequence star"
+    },
+    {
+        "name": "Aldebaran",
+        "distance_from_earth_ly": 65.1,
+        "size": "44.2 Solar radii",
+        "mass": "1.1–1.7 Solar Masses",
+        "temperature": "3,910 K",
+        "type": "K-type giant"
+    },
+    {
+        "name": "Spica",
+        "distance_from_earth_ly": 250,
+        "size": "7.22 Solar radii",
+        "mass": "10.2 Solar Masses",
+        "temperature": "22,400 K",
+        "type": "B-type main-sequence star"
+    },
+    {
+        "name": "Achernar",
+        "distance_from_earth_ly": 139,
+        "size": "7.6 Solar radii",
+        "mass": "6.7 Solar Masses",
+        "temperature": "14,000 K",
+        "type": "B-type main-sequence star"
+    },
+    {
+        "name": "Alnilam",
+        "distance_from_earth_ly": 2000,
+        "size": "42.1 Solar radii",
+        "mass": "30 Solar Masses",
+        "temperature": "26,000 K",
+        "type": "B-type supergiant"
+    },
+    {
+        "name": "Betelgeuse",
+        "distance_from_earth_ly": 643,
+        "size": "887 Solar radii",
+        "mass": "11.6–11.8 Solar Masses",
+        "temperature": "3,600 K",
+        "type": "M-type supergiant"
+    },
+    {
+        "name": "Alnair",
+        "distance_from_earth_ly": 101,
+        "size": "2.1 Solar radii",
+        "mass": "2.2 Solar Masses",
+        "temperature": "8,160 K",
+        "type": "B-type main-sequence star"
+    },
+    {
+        "name": "Bellatrix",
+        "distance_from_earth_ly": 243,
+        "size": "6.7 Solar radii",
+        "mass": "8.6 Solar Masses",
+        "temperature": "22,000 K",
+        "type": "B-type main-sequence star"
+    },
+    {
+        "name": "Mirfak",
+        "distance_from_earth_ly": 590,
+        "size": "42.4 Solar radii",
+        "mass": "6.7 Solar Masses",
+        "temperature": "6,500 K",
+        "type": "F-type supergiant"
+    },
+    {
+        "name": "Denebola",
+        "distance_from_earth_ly": 36.2,
+        "size": "2.9 Solar radii",
+        "mass": "2.75 Solar Masses",
+        "temperature": "8,500 K",
+        "type": "A-type main-sequence star (White Dwarf)"
+    },
+    {
+        "name": "Atria",
+        "distance_from_earth_ly": 390,
+        "size": "95 Solar radii",
+        "mass": "8.5 Solar Masses",
+        "temperature": "4,000 K",
+        "type": "M-type supergiant"
+    },
+    {
+        "name": "Alphard",
+        "distance_from_earth_ly": 177,
+        "size": "42.4 Solar radii",
+        "mass": "3.7 Solar Masses",
+        "temperature": "3,900 K",
+        "type": "K-type giant"
+    },
+    {
+        "name": "Scheat",
+        "distance_from_earth_ly": 196,
+        "size": "109 Solar radii",
+        "mass": "4.5 Solar Masses",
+        "temperature": "3,640 K",
+        "type": "M-type supergiant"
+    },
+    {
+        "name": "Mirach",
+        "distance_from_earth_ly": 199,
+        "size": "68 Solar radii",
+        "mass": "3.2 Solar Masses",
+        "temperature": "3,420 K",
+        "type": "M-type supergiant"
+    },
+    {
+        "name": "Achird",
+        "distance_from_earth_ly": 109,
+        "size": "1.45 Solar radii",
+        "mass": "1.9 Solar Masses",
+        "temperature": "6,350 K",
+        "type": "F-type main-sequence star"
+    },
+    {
+        "name": "Hamal",
+        "distance_from_earth_ly": 65.8,
+        "size": "44 Solar radii",
+        "mass": "1.2 Solar Masses",
+        "temperature": "4,580 K",
+        "type": "K-type giant"
+    },
+    {
+        "name": "Menkar",
+        "distance_from_earth_ly": 220,
+        "size": "220 Solar radii",
+        "mass": "40 Solar Masses",
+        "temperature": "3,600 K",
+        "type": "M-type supergiant"
+    },
+    {
+        "name": "Algol",
+        "distance_from_earth_ly": 92.8,
+        "size": "3.7 Solar radii",
+        "mass": "3.6 Solar Masses",
+        "temperature": "5,900 K",
+        "type": "B-type main-sequence star"
+    },
+    {
+        "name": "Mirzam",
+        "distance_from_earth_ly": 500,
+        "size": "12 Solar radii",
+        "mass": "9.5 Solar Masses",
+        "temperature": "25,500 K",
+        "type": "B-type main-sequence star"
+    },
+    {
+        "name": "Alcyone",
+        "distance_from_earth_ly": 440,
+        "size": "6.8 Solar radii",
+        "mass": "7 Solar Masses",
+        "temperature": "18,000 K",
+        "type": "B-type main-sequence star"
+    },
+    {
+        "name": "Mira",
+        "distance_from_earth_ly": 420,
+        "size": "332 Solar radii",
+        "mass": "1.04 Solar Masses",
+        "temperature": "2,850 K",
+        "type": "M-type giant"
+    },
+    {
+        "name": "Polaris",
+        "distance_from_earth_ly": 431,
+        "size": "46.6 Solar radii",
+        "mass": "4.5 Solar Masses",
+        "temperature": "6,000 K",
+        "type": "F-type supergiant"
+    },
+    {
+        "name": "Algol",
+        "distance_from_earth_ly": 92.8,
+        "size": "3.7 Solar radii",
+        "mass": "3.6 Solar Masses",
+        "temperature": "5,900 K",
+        "type": "B-type main-sequence star"
+    },
+    {
+        "name": "Naos",
+        "distance_from_earth_ly": 2500,
+        "size": "16 Solar radii",
+        "mass": "40 Solar Masses",
+        "temperature": "42,000 K",
+        "type": "O-type main-sequence star"
+    },
+    {
+        "name": "Avior",
+        "distance_from_earth_ly": 630,
+        "size": "61.1 Solar radii",
+        "mass": "12 Solar Masses",
+        "temperature": "22,000 K",
+        "type": "A-type supergiant"
+    },
+    {
+        "name": "Kaus Australis",
+        "distance_from_earth_ly": 144,
+        "size": "5.2 Solar radii",
+        "mass": "12.4 Solar Masses",
+        "temperature": "27,200 K",
+        "type": "B-type main-sequence star"
+    },
+    {
+        "name": "Rho Cassiopeiae",
+        "distance_from_earth_ly": 8200,
+        "size": "450 Solar radii",
+        "mass": "40 Solar Masses",
+        "temperature": "6,500 K",
+        "type": "F-type supergiant"
+    },
+    {
+        "name": "Sadr",
+        "distance_from_earth_ly": 1800,
+        "size": "150 Solar radii",
+        "mass": "12 Solar Masses",
+        "temperature": "7,500 K",
+        "type": "F-type supergiant"
+    },
+    {
+        "name": "Enif",
+        "distance_from_earth_ly": 690,
+        "size": "185 Solar radii",
+        "mass": "12 Solar Masses",
+        "temperature": "5,060 K",
+        "type": "K-type supergiant"
+    },
+    {
+        "name": "Zeta Puppis",
+        "distance_from_earth_ly": 572,
+        "size": "7.6 Solar radii",
+        "mass": "9 Solar Masses",
+        "temperature": "36,200 K",
+        "type": "O-type main-sequence star"
+    },
+    {
+        "name": "Nihal",
+        "distance_from_earth_ly": 160,
+        "size": "5.7 Solar radii",
+        "mass": "4.5 Solar Masses",
+        "temperature": "16,000 K",
+        "type": "B-type main-sequence star"
+    }
+]
