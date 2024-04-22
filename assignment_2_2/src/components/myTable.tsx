@@ -4,12 +4,12 @@ import MyTableBody from './myTableBody';
 import MyTableHeader from './myTableHeader';
 //make table row??
 export default function MyTable(props: { headers: string[], data: {
-    name: string, 
-    distance_from_earth_ly: number, 
-    size: string, 
-    mass: string, 
-    temperature: string, 
-    type: string 
+    title: string, 
+    release_year: number, 
+    director: string, 
+    genre: string[], 
+    starring_actors: string[], 
+    rotten_tomatoes_score: number,
   }[]; }) {
     return (
         <Table>

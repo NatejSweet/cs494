@@ -1,0 +1,1120 @@
+[
+  {
+    "title": "Inception",
+    "release_year": 2010,
+    "director": "Christopher Nolan",
+    "genre": ["Action", "Adventure", "Sci-Fi"],
+    "starring_actors": [
+      "Leonardo DiCaprio",
+      "Joseph Gordon-Levitt",
+      "Ellen Page",
+      "Tom Hardy",
+      "Ken Watanabe"
+    ],
+    "rotten_tomatoes_score": 87.0
+  },
+  {
+    "title": "The Godfather",
+    "release_year": 1972,
+    "director": "Francis Ford Coppola",
+    "genre": ["Crime", "Drama"],
+    "starring_actors": [
+      "Marlon Brando",
+      "Al Pacino",
+      "James Caan",
+      "Richard S. Castellano",
+      "Robert Duvall"
+    ],
+    "rotten_tomatoes_score": 98.0
+  },
+  {
+    "title": "The Dark Knight",
+    "release_year": 2008,
+    "director": "Christopher Nolan",
+    "genre": ["Action", "Crime", "Drama"],
+    "starring_actors": [
+      "Christian Bale",
+      "Heath Ledger",
+      "Aaron Eckhart",
+      "Michael Caine",
+      "Maggie Gyllenhaal"
+    ],
+    "rotten_tomatoes_score": 94.0
+  },
+  {
+    "title": "Pulp Fiction",
+    "release_year": 1994,
+    "director": "Quentin Tarantino",
+    "genre": ["Crime", "Drama"],
+    "starring_actors": [
+      "John Travolta",
+      "Uma Thurman",
+      "Samuel L. Jackson",
+      "Bruce Willis",
+      "Ving Rhames"
+    ],
+    "rotten_tomatoes_score": 92.0
+  },
+  {
+    "title": "The Shawshank Redemption",
+    "release_year": 1994,
+    "director": "Frank Darabont",
+    "genre": ["Drama"],
+    "starring_actors": [
+      "Tim Robbins",
+      "Morgan Freeman",
+      "Bob Gunton",
+      "William Sadler",
+      "Clancy Brown"
+    ],
+    "rotten_tomatoes_score": 91.0
+  },
+  {
+    "title": "Forrest Gump",
+    "release_year": 1994,
+    "director": "Robert Zemeckis",
+    "genre": ["Drama", "Romance"],
+    "starring_actors": [
+      "Tom Hanks",
+      "Robin Wright",
+      "Gary Sinise",
+      "Sally Field",
+      "Mykelti Williamson"
+    ],
+    "rotten_tomatoes_score": 71.0
+  },
+  {
+    "title": "The Matrix",
+    "release_year": 1999,
+    "director": "The Wachowskis",
+    "genre": ["Action", "Sci-Fi"],
+    "starring_actors": [
+      "Keanu Reeves",
+      "Laurence Fishburne",
+      "Carrie-Anne Moss",
+      "Hugo Weaving",
+      "Joe Pantoliano"
+    ],
+    "rotten_tomatoes_score": 87.0
+  },
+  {
+    "title": "Fight Club",
+    "release_year": 1999,
+    "director": "David Fincher",
+    "genre": ["Drama"],
+    "starring_actors": [
+      "Brad Pitt",
+      "Edward Norton",
+      "Helena Bonham Carter",
+      "Meat Loaf",
+      "Jared Leto"
+    ],
+    "rotten_tomatoes_score": 79.0
+  },
+  {
+    "title": "The Silence of the Lambs",
+    "release_year": 1991,
+    "director": "Jonathan Demme",
+    "genre": ["Crime", "Drama", "Thriller"],
+    "starring_actors": [
+      "Jodie Foster",
+      "Anthony Hopkins",
+      "Scott Glenn",
+      "Ted Levine",
+      "Anthony Heald"
+    ],
+    "rotten_tomatoes_score": 96.0
+  },
+  {
+    "title": "Gladiator",
+    "release_year": 2000,
+    "director": "Ridley Scott",
+    "genre": ["Action", "Adventure", "Drama"],
+    "starring_actors": [
+      "Russell Crowe",
+      "Joaquin Phoenix",
+      "Connie Nielsen",
+      "Oliver Reed",
+      "Richard Harris"
+    ],
+    "rotten_tomatoes_score": 77.0
+  },
+  {
+    "title": "Titanic",
+    "release_year": 1997,
+    "director": "James Cameron",
+    "genre": ["Drama", "Romance"],
+    "starring_actors": [
+      "Leonardo DiCaprio",
+      "Kate Winslet",
+      "Billy Zane",
+      "Kathy Bates",
+      "Frances Fisher"
+    ],
+    "rotten_tomatoes_score": 89.0
+  },
+  {
+    "title": "The Lord of the Rings: The Return of the King",
+    "release_year": 2003,
+    "director": "Peter Jackson",
+    "genre": ["Action", "Adventure", "Drama"],
+    "starring_actors": [
+      "Elijah Wood",
+      "Viggo Mortensen",
+      "Ian McKellen",
+      "Liv Tyler",
+      "Orlando Bloom"
+    ],
+    "rotten_tomatoes_score": 93.0
+  },
+  {
+    "title": "The Departed",
+    "release_year": 2006,
+    "director": "Martin Scorsese",
+    "genre": ["Crime", "Drama", "Thriller"],
+    "starring_actors": [
+      "Leonardo DiCaprio",
+      "Matt Damon",
+      "Jack Nicholson",
+      "Mark Wahlberg",
+      "Martin Sheen"
+    ],
+    "rotten_tomatoes_score": 91.0
+  },
+  {
+    "title": "The Shining",
+    "release_year": 1980,
+    "director": "Stanley Kubrick",
+    "genre": ["Drama", "Horror"],
+    "starring_actors": [
+      "Jack Nicholson",
+      "Shelley Duvall",
+      "Danny Lloyd",
+      "Scatman Crothers",
+      "Barry Nelson"
+    ],
+    "rotten_tomatoes_score": 84.0
+  },
+  {
+    "title": "Goodfellas",
+    "release_year": 1990,
+    "director": "Martin Scorsese",
+    "genre": ["Biography", "Crime", "Drama"],
+    "starring_actors": [
+      "Robert De Niro",
+      "Ray Liotta",
+      "Joe Pesci",
+      "Lorraine Bracco",
+      "Paul Sorvino"
+    ],
+    "rotten_tomatoes_score": 96.0
+  },
+  {
+    "title": "Schindler's List",
+    "release_year": 1993,
+    "director": "Steven Spielberg",
+    "genre": ["Biography", "Drama", "History"],
+    "starring_actors": [
+      "Liam Neeson",
+      "Ben Kingsley",
+      "Ralph Fiennes",
+      "Caroline Goodall",
+      "Jonathan Sagall"
+    ],
+    "rotten_tomatoes_score": 97.0
+  },
+  {
+    "title": "Saving Private Ryan",
+    "release_year": 1998,
+    "director": "Steven Spielberg",
+    "genre": ["Drama", "War"],
+    "starring_actors": [
+      "Tom Hanks",
+      "Matt Damon",
+      "Tom Sizemore",
+      "Edward Burns",
+      "Barry Pepper"
+    ],
+    "rotten_tomatoes_score": 93.0
+  },
+  {
+    "title": "Forrest Gump",
+    "release_year": 1994,
+    "director": "Robert Zemeckis",
+    "genre": ["Drama", "Romance"],
+    "starring_actors": [
+      "Tom Hanks",
+      "Robin Wright",
+      "Gary Sinise",
+      "Sally Field",
+      "Mykelti Williamson"
+    ],
+    "rotten_tomatoes_score": 71.0
+  },
+  {
+    "title": "Jurassic Park",
+    "release_year": 1993,
+    "director": "Steven Spielberg",
+    "genre": ["Action", "Adventure", "Sci-Fi"],
+    "starring_actors": [
+      "Sam Neill",
+      "Laura Dern",
+      "Jeff Goldblum",
+      "Richard Attenborough",
+      "Bob Peck"
+    ],
+    "rotten_tomatoes_score": 91.0
+  },
+  {
+    "title": "Avatar",
+    "release_year": 2009,
+    "director": "James Cameron",
+    "genre": ["Action", "Adventure", "Fantasy"],
+    "starring_actors": [
+      "Sam Worthington",
+      "Zoe Saldana",
+      "Sigourney Weaver",
+      "Stephen Lang",
+      "Michelle Rodriguez"
+    ],
+    "rotten_tomatoes_score": 82.0
+  },
+  {
+    "title": "The Sixth Sense",
+    "release_year": 1999,
+    "director": "M. Night Shyamalan",
+    "genre": ["Drama", "Mystery", "Thriller"],
+    "starring_actors": [
+      "Bruce Willis",
+      "Haley Joel Osment",
+      "Toni Collette",
+      "Olivia Williams",
+      "Donnie Wahlberg"
+    ],
+    "rotten_tomatoes_score": 86.0
+  },
+  {
+    "title": "The Lion King",
+    "release_year": 1994,
+    "director": "Roger Allers, Rob Minkoff",
+    "genre": ["Animation", "Adventure", "Drama"],
+    "starring_actors": [
+      "Matthew Broderick",
+      "Jeremy Irons",
+      "James Earl Jones",
+      "Jonathan Taylor Thomas",
+      "Moira Kelly"
+    ],
+    "rotten_tomatoes_score": 93.0
+  },
+  {
+    "title": "The Green Mile",
+    "release_year": 1999,
+    "director": "Frank Darabont",
+    "genre": ["Crime", "Drama", "Fantasy"],
+    "starring_actors": [
+      "Tom Hanks",
+      "Michael Clarke Duncan",
+      "David Morse",
+      "Bonnie Hunt",
+      "James Cromwell"
+    ],
+    "rotten_tomatoes_score": 78.0
+  },
+  {
+    "title": "Inglourious Basterds",
+    "release_year": 2009,
+    "director": "Quentin Tarantino",
+    "genre": ["Adventure", "Drama", "War"],
+    "starring_actors": [
+      "Brad Pitt",
+      "Diane Kruger",
+      "Eli Roth",
+      "Mélanie Laurent",
+      "Christoph Waltz"
+    ],
+    "rotten_tomatoes_score": 88.0
+  },
+  {
+    "title": "The Godfather: Part II",
+    "release_year": 1974,
+    "director": "Francis Ford Coppola",
+    "genre": ["Crime", "Drama"],
+    "starring_actors": [
+      "Al Pacino",
+      "Robert De Niro",
+      "Robert Duvall",
+      "Diane Keaton",
+      "John Cazale"
+    ],
+    "rotten_tomatoes_score": 97.0
+  },
+  {
+    "title": "The Prestige",
+    "release_year": 2006,
+    "director": "Christopher Nolan",
+    "genre": ["Drama", "Mystery", "Sci-Fi"],
+    "starring_actors": [
+      "Christian Bale",
+      "Hugh Jackman",
+      "Scarlett Johansson",
+      "Michael Caine",
+      "Piper Perabo"
+    ],
+    "rotten_tomatoes_score": 76.0
+  },
+  {
+    "title": "The Usual Suspects",
+    "release_year": 1995,
+    "director": "Bryan Singer",
+    "genre": ["Crime", "Mystery", "Thriller"],
+    "starring_actors": [
+      "Kevin Spacey",
+      "Gabriel Byrne",
+      "Chazz Palminteri",
+      "Stephen Baldwin",
+      "Kevin Pollak"
+    ],
+    "rotten_tomatoes_score": 88.0
+  },
+  {
+    "title": "The Truman Show",
+    "release_year": 1998,
+    "director": "Peter Weir",
+    "genre": ["Comedy", "Drama", "Sci-Fi"],
+    "starring_actors": [
+      "Jim Carrey",
+      "Ed Harris",
+      "Laura Linney",
+      "Noah Emmerich",
+      "Natascha McElhone"
+    ],
+    "rotten_tomatoes_score": 94.0
+  },
+  {
+    "title": "The Terminator",
+    "release_year": 1984,
+    "director": "James Cameron",
+    "genre": ["Action", "Sci-Fi"],
+    "starring_actors": [
+      "Arnold Schwarzenegger",
+      "Michael Biehn",
+      "Linda Hamilton",
+      "Paul Winfield",
+      "Lance Henriksen"
+    ],
+    "rotten_tomatoes_score": 89.0
+  },
+  {
+    "title": "The Social Network",
+    "release_year": 2010,
+    "director": "David Fincher",
+    "genre": ["Biography", "Drama"],
+    "starring_actors": [
+      "Jesse Eisenberg",
+      "Andrew Garfield",
+      "Justin Timberlake",
+      "Armie Hammer",
+      "Rooney Mara"
+    ],
+    "rotten_tomatoes_score": 96.0
+  },
+  {
+    "title": "The Wizard of Oz",
+    "release_year": 1939,
+    "director": "Victor Fleming",
+    "genre": ["Adventure", "Family", "Fantasy"],
+    "starring_actors": [
+      "Judy Garland",
+      "Frank Morgan",
+      "Ray Bolger",
+      "Bert Lahr",
+      "Jack Haley"
+    ],
+    "rotten_tomatoes_score": 98.0
+  },
+  {
+    "title": "The Grand Budapest Hotel",
+    "release_year": 2014,
+    "director": "Wes Anderson",
+    "genre": ["Adventure", "Comedy", "Crime"],
+    "starring_actors": [
+      "Ralph Fiennes",
+      "F. Murray Abraham",
+      "Mathieu Amalric",
+      "Adrien Brody",
+      "Willem Dafoe"
+    ],
+    "rotten_tomatoes_score": 91.0
+  },
+  {
+    "title": "The Revenant",
+    "release_year": 2015,
+    "director": "Alejandro González Iñárritu",
+    "genre": ["Action", "Adventure", "Biography"],
+    "starring_actors": [
+      "Leonardo DiCaprio",
+      "Tom Hardy",
+      "Domhnall Gleeson",
+      "Will Poulter",
+      "Forrest Goodluck"
+    ],
+    "rotten_tomatoes_score": 78.0
+  },
+  {
+    "title": "The Matrix",
+    "release_year": 1999,
+    "director": "The Wachowskis",
+    "genre": ["Action", "Sci-Fi"],
+    "starring_actors": [
+      "Keanu Reeves",
+      "Laurence Fishburne",
+      "Carrie-Anne Moss",
+      "Hugo Weaving",
+      "Joe Pantoliano"
+    ],
+    "rotten_tomatoes_score": 87.0
+  },
+  {
+    "title": "The Graduate",
+    "release_year": 1967,
+    "director": "Mike Nichols",
+    "genre": ["Comedy", "Drama", "Romance"],
+    "starring_actors": [
+      "Dustin Hoffman",
+      "Anne Bancroft",
+      "Katharine Ross",
+      "William Daniels",
+      "Murray Hamilton"
+    ],
+    "rotten_tomatoes_score": 87.0
+  },
+  {
+    "title": "The Exorcist",
+    "release_year": 1973,
+    "director": "William Friedkin",
+    "genre": ["Horror"],
+    "starring_actors": [
+      "Ellen Burstyn",
+      "Max von Sydow",
+      "Linda Blair",
+      "Lee J. Cobb",
+      "Kitty Winn"
+    ],
+    "rotten_tomatoes_score": 83.0
+  },
+  {
+    "title": "The Avengers",
+    "release_year": 2012,
+    "director": "Joss Whedon",
+    "genre": ["Action", "Adventure", "Sci-Fi"],
+    "starring_actors": [
+      "Robert Downey Jr.",
+      "Chris Evans",
+      "Mark Ruffalo",
+      "Chris Hemsworth",
+      "Scarlett Johansson"
+    ],
+    "rotten_tomatoes_score": 91.0
+  },
+  {
+    "title": "The Godfather: Part III",
+    "release_year": 1990,
+    "director": "Francis Ford Coppola",
+    "genre": ["Crime", "Drama"],
+    "starring_actors": [
+      "Al Pacino",
+      "Diane Keaton",
+      "Talia Shire",
+      "Andy García",
+      "Eli Wallach"
+    ],
+    "rotten_tomatoes_score": 68.0
+  },
+  {
+    "title": "The Departed",
+    "release_year": 2006,
+    "director": "Martin Scorsese",
+    "genre": ["Crime", "Drama", "Thriller"],
+    "starring_actors": [
+      "Leonardo DiCaprio",
+      "Matt Damon",
+      "Jack Nicholson",
+      "Mark Wahlberg",
+      "Martin Sheen"
+    ],
+    "rotten_tomatoes_score": 91.0
+  },
+  {
+    "title": "The Deer Hunter",
+    "release_year": 1978,
+    "director": "Michael Cimino",
+    "genre": ["Drama", "War"],
+    "starring_actors": [
+      "Robert De Niro",
+      "Christopher Walken",
+      "John Cazale",
+      "John Savage",
+      "Meryl Streep"
+    ],
+    "rotten_tomatoes_score": 94.0
+  },
+  {
+    "title": "The Hangover",
+    "release_year": 2009,
+    "director": "Todd Phillips",
+    "genre": ["Comedy"],
+    "starring_actors": [
+      "Bradley Cooper",
+      "Ed Helms",
+      "Zach Galifianakis",
+      "Justin Bartha",
+      "Heather Graham"
+    ],
+    "rotten_tomatoes_score": 79.0
+  },
+  {
+    "title": "The Bridge on the River Kwai",
+    "release_year": 1957,
+    "director": "David Lean",
+    "genre": ["Adventure", "Drama", "War"],
+    "starring_actors": [
+      "William Holden",
+      "Alec Guinness",
+      "Jack Hawkins",
+      "Sessue Hayakawa",
+      "James Donald"
+    ],
+    "rotten_tomatoes_score": 95.0
+  },
+  {
+    "title": "The Sound of Music",
+    "release_year": 1965,
+    "director": "Robert Wise",
+    "genre": ["Biography", "Drama", "Family"],
+    "starring_actors": [
+      "Julie Andrews",
+      "Christopher Plummer",
+      "Eleanor Parker",
+      "Richard Haydn",
+      "Peggy Wood"
+    ],
+    "rotten_tomatoes_score": 83.0
+  },
+  {
+    "title": "The King's Speech",
+    "release_year": 2010,
+    "director": "Tom Hooper",
+    "genre": ["Biography", "Drama", "History"],
+    "starring_actors": [
+      "Colin Firth",
+      "Geoffrey Rush",
+      "Helena Bonham Carter",
+      "Guy Pearce",
+      "Timothy Spall"
+    ],
+    "rotten_tomatoes_score": 94.0
+  },
+  {
+    "title": "The Curious Case of Benjamin Button",
+    "release_year": 2008,
+    "director": "David Fincher",
+    "genre": ["Drama", "Fantasy", "Romance"],
+    "starring_actors": [
+      "Brad Pitt",
+      "Cate Blanchett",
+      "Tilda Swinton",
+      "Julia Ormond",
+      "Jason Flemyng"
+    ],
+    "rotten_tomatoes_score": 71.0
+  },
+  {
+    "title": "The Bourne Identity",
+    "release_year": 2002,
+    "director": "Doug Liman",
+    "genre": ["Action", "Mystery", "Thriller"],
+    "starring_actors": [
+      "Matt Damon",
+      "Franka Potente",
+      "Chris Cooper",
+      "Clive Owen",
+      "Brian Cox"
+    ],
+    "rotten_tomatoes_score": 83.0
+  },
+  {
+    "title": "The Bourne Ultimatum",
+    "release_year": 2007,
+    "director": "Paul Greengrass",
+    "genre": ["Action", "Mystery", "Thriller"],
+    "starring_actors": [
+      "Matt Damon",
+      "Edgar Ramírez",
+      "Joan Allen",
+      "Julia Stiles",
+      "David Strathairn"
+    ],
+    "rotten_tomatoes_score": 92.0
+  },
+  {
+    "title": "The Blair Witch Project",
+    "release_year": 1999,
+    "director": "Daniel Myrick, Eduardo Sánchez",
+    "genre": ["Horror", "Mystery"],
+    "starring_actors": [
+      "Heather Donahue",
+      "Michael C. Williams",
+      "Joshua Leonard"
+    ],
+    "rotten_tomatoes_score": 86.0
+  },
+  {
+    "title": "Taxi Driver",
+    "release_year": 1976,
+    "director": "Martin Scorsese",
+    "genre": ["Crime", "Drama"],
+    "starring_actors": [
+      "Robert De Niro",
+      "Jodie Foster",
+      "Cybill Shepherd",
+      "Harvey Keitel",
+      "Albert Brooks"
+    ],
+    "rotten_tomatoes_score": 96.0
+  },
+  {
+    "title": "Star Wars: Episode IV - A New Hope",
+    "release_year": 1977,
+    "director": "George Lucas",
+    "genre": ["Action", "Adventure", "Fantasy"],
+    "starring_actors": [
+      "Mark Hamill",
+      "Harrison Ford",
+      "Carrie Fisher",
+      "Alec Guinness",
+      "Peter Cushing"
+    ],
+    "rotten_tomatoes_score": 92.0
+  },
+  {
+    "title": "Star Wars: Episode V - The Empire Strikes Back",
+    "release_year": 1980,
+    "director": "Irvin Kershner",
+    "genre": ["Action", "Adventure", "Fantasy"],
+    "starring_actors": [
+      "Mark Hamill",
+      "Harrison Ford",
+      "Carrie Fisher",
+      "Billy Dee Williams",
+      "Anthony Daniels"
+    ],
+    "rotten_tomatoes_score": 94.0
+  },
+  {
+    "title": "Star Wars: Episode VI - Return of the Jedi",
+    "release_year": 1983,
+    "director": "Richard Marquand",
+    "genre": ["Action", "Adventure", "Fantasy"],
+    "starring_actors": [
+      "Mark Hamill",
+      "Harrison Ford",
+      "Carrie Fisher",
+      "Billy Dee Williams",
+      "Anthony Daniels"
+    ],
+    "rotten_tomatoes_score": 81.0
+  },
+  {
+    "title": "Star Wars: Episode I - The Phantom Menace",
+    "release_year": 1999,
+    "director": "George Lucas",
+    "genre": ["Action", "Adventure", "Fantasy"],
+    "starring_actors": [
+      "Liam Neeson",
+      "Ewan McGregor",
+      "Natalie Portman",
+      "Jake Lloyd",
+      "Ian McDiarmid"
+    ],
+    "rotten_tomatoes_score": 53.0
+  },
+  {
+    "title": "Star Wars: Episode II - Attack of the Clones",
+    "release_year": 2002,
+    "director": "George Lucas",
+    "genre": ["Action", "Adventure", "Fantasy"],
+    "starring_actors": [
+      "Hayden Christensen",
+      "Natalie Portman",
+      "Ewan McGregor",
+      "Christopher Lee",
+      "Samuel L. Jackson"
+    ],
+    "rotten_tomatoes_score": 65.0
+  },
+  {
+    "title": "Star Wars: Episode III - Revenge of the Sith",
+    "release_year": 2005,
+    "director": "George Lucas",
+    "genre": ["Action", "Adventure", "Fantasy"],
+    "starring_actors": [
+      "Hayden Christensen",
+      "Natalie Portman",
+      "Ewan McGregor",
+      "Ian McDiarmid",
+      "Samuel L. Jackson"
+    ],
+    "rotten_tomatoes_score": 79.0
+  },
+  {
+    "title": "Shrek",
+    "release_year": 2001,
+    "director": "Andrew Adamson, Vicky Jenson",
+    "genre": ["Animation", "Adventure", "Comedy"],
+    "starring_actors": [
+      "Mike Myers",
+      "Eddie Murphy",
+      "Cameron Diaz",
+      "John Lithgow",
+      "Vincent Cassel"
+    ],
+    "rotten_tomatoes_score": 88.0
+  },
+  {
+    "title": "Raiders of the Lost Ark",
+    "release_year": 1981,
+    "director": "Steven Spielberg",
+    "genre": ["Action", "Adventure"],
+    "starring_actors": [
+      "Harrison Ford",
+      "Karen Allen",
+      "Paul Freeman",
+      "John Rhys-Davies",
+      "Ronald Lacey"
+    ],
+    "rotten_tomatoes_score": 95.0
+  },
+  {
+    "title": "Psycho",
+    "release_year": 1960,
+    "director": "Alfred Hitchcock",
+    "genre": ["Horror", "Mystery", "Thriller"],
+    "starring_actors": [
+      "Anthony Perkins",
+      "Janet Leigh",
+      "Vera Miles",
+      "John Gavin",
+      "Martin Balsam"
+    ],
+    "rotten_tomatoes_score": 96.0
+  },
+  {
+    "title": "Pulp Fiction",
+    "release_year": 1994,
+    "director": "Quentin Tarantino",
+    "genre": ["Crime", "Drama"],
+    "starring_actors": [
+      "John Travolta",
+      "Uma Thurman",
+      "Samuel L. Jackson",
+      "Bruce Willis",
+      "Ving Rhames"
+    ],
+    "rotten_tomatoes_score": 92.0
+  },
+  {
+    "title": "Psycho",
+    "release_year": 1960,
+    "director": "Alfred Hitchcock",
+    "genre": ["Horror", "Mystery", "Thriller"],
+    "starring_actors": [
+      "Anthony Perkins",
+      "Janet Leigh",
+      "Vera Miles",
+      "John Gavin",
+      "Martin Balsam"
+    ],
+    "rotten_tomatoes_score": 96.0
+  },
+  {
+    "title": "Indiana Jones and the Last Crusade",
+    "release_year": 1989,
+    "director": "Steven Spielberg",
+    "genre": ["Action", "Adventure"],
+    "starring_actors": [
+      "Harrison Ford",
+      "Sean Connery",
+      "Alison Doody",
+      "Denholm Elliott",
+      "John Rhys-Davies"
+    ],
+    "rotten_tomatoes_score": 88.0
+  },
+  {
+    "title": "Inception",
+    "release_year": 2010,
+    "director": "Christopher Nolan",
+    "genre": ["Action", "Adventure", "Sci-Fi"],
+    "starring_actors": [
+      "Leonardo DiCaprio",
+      "Joseph Gordon-Levitt",
+      "Ellen Page",
+      "Tom Hardy",
+      "Ken Watanabe"
+    ],
+    "rotten_tomatoes_score": 87.0
+  },
+  {
+    "title": "Gone with the Wind",
+    "release_year": 1939,
+    "director": "Victor Fleming",
+    "genre": ["Drama", "History", "Romance"],
+    "starring_actors": [
+      "Clark Gable",
+      "Vivien Leigh",
+      "Thomas Mitchell",
+      "Barbara O'Neil",
+      "Evelyn Keyes"
+    ],
+    "rotten_tomatoes_score": 92.0
+  },
+  {
+    "title": "Gladiator",
+    "release_year": 2000,
+    "director": "Ridley Scott",
+    "genre": ["Action", "Adventure", "Drama"],
+    "starring_actors": [
+      "Russell Crowe",
+      "Joaquin Phoenix",
+      "Connie Nielsen",
+      "Oliver Reed",
+      "Richard Harris"
+    ],
+    "rotten_tomatoes_score": 77.0
+  },
+  {
+    "title": "Forrest Gump",
+    "release_year": 1994,
+    "director": "Robert Zemeckis",
+    "genre": ["Drama", "Romance"],
+    "starring_actors": [
+      "Tom Hanks",
+      "Robin Wright",
+      "Gary Sinise",
+      "Sally Field",
+      "Mykelti Williamson"
+    ],
+    "rotten_tomatoes_score": 71.0
+  },
+  {
+    "title": "E.T. the Extra-Terrestrial",
+    "release_year": 1982,
+    "director": "Steven Spielberg",
+    "genre": ["Family", "Sci-Fi"],
+    "starring_actors": [
+      "Henry Thomas",
+      "Drew Barrymore",
+      "Peter Coyote",
+      "Robert MacNaughton",
+      "Dee Wallace"
+    ],
+    "rotten_tomatoes_score": 98.0
+  },
+  {
+    "title": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
+    "release_year": 1964,
+    "director": "Stanley Kubrick",
+    "genre": ["Comedy"],
+    "starring_actors": [
+      "Peter Sellers",
+      "George C. Scott",
+      "Sterling Hayden",
+      "Keenan Wynn",
+      "Slim Pickens"
+    ],
+    "rotten_tomatoes_score": 94.0
+  },
+  {
+    "title": "Django Unchained",
+    "release_year": 2012,
+    "director": "Quentin Tarantino",
+    "genre": ["Drama", "Western"],
+    "starring_actors": [
+      "Jamie Foxx",
+      "Christoph Waltz",
+      "Leonardo DiCaprio",
+      "Kerry Washington",
+      "Samuel L. Jackson"
+    ],
+    "rotten_tomatoes_score": 87.0
+  },
+  {
+    "title": "Die Hard",
+    "release_year": 1988,
+    "director": "John McTiernan",
+    "genre": ["Action", "Thriller"],
+    "starring_actors": [
+      "Bruce Willis",
+      "Alan Rickman",
+      "Bonnie Bedelia",
+      "Reginald VelJohnson",
+      "Paul Gleason"
+    ],
+    "rotten_tomatoes_score": 94.0
+  },
+  {
+    "title": "Casablanca",
+    "release_year": 1942,
+    "director": "Michael Curtiz",
+    "genre": ["Drama", "Romance", "War"],
+    "starring_actors": [
+      "Humphrey Bogart",
+      "Ingrid Bergman",
+      "Paul Henreid",
+      "Claude Rains",
+      "Conrad Veidt"
+    ],
+    "rotten_tomatoes_score": 99.0
+  },
+  {
+    "title": "Braveheart",
+    "release_year": 1995,
+    "director": "Mel Gibson",
+    "genre": ["Biography", "Drama", "History"],
+    "starring_actors": [
+      "Mel Gibson",
+      "Sophie Marceau",
+      "Patrick McGoohan",
+      "Catherine McCormack",
+      "Brendan Gleeson"
+    ],
+    "rotten_tomatoes_score": 77.0
+  },
+  {
+    "title": "American Beauty",
+    "release_year": 1999,
+    "director": "Sam Mendes",
+    "genre": ["Drama"],
+    "starring_actors": [
+      "Kevin Spacey",
+      "Annette Bening",
+      "Thora Birch",
+      "Wes Bentley",
+      "Mena Suvari"
+    ],
+    "rotten_tomatoes_score": 87.0
+  },
+  {
+    "title": "Alien",
+    "release_year": 1979,
+    "director": "Ridley Scott",
+    "genre": ["Horror", "Sci-Fi"],
+    "starring_actors": [
+      "Sigourney Weaver",
+      "Tom Skerritt",
+      "John Hurt",
+      "Ian Holm",
+      "Yaphet Kotto"
+    ],
+    "rotten_tomatoes_score": 97.0
+  },
+  {
+    "title": "Aliens",
+    "release_year": 1986,
+    "director": "James Cameron",
+    "genre": ["Action", "Adventure", "Sci-Fi"],
+    "starring_actors": [
+      "Sigourney Weaver",
+      "Michael Biehn",
+      "Carrie Henn",
+      "Paul Reiser",
+      "Lance Henriksen"
+    ],
+    "rotten_tomatoes_score": 97.0
+  },
+  {
+    "title": "American History X",
+    "release_year": 1998,
+    "director": "Tony Kaye",
+    "genre": ["Drama"],
+    "starring_actors": [
+      "Edward Norton",
+      "Edward Furlong",
+      "Beverly D'Angelo",
+      "Jennifer Lien",
+      "Ethan Suplee"
+    ],
+    "rotten_tomatoes_score": 83.0
+  },
+  {
+    "title": "Amélie",
+    "release_year": 2001,
+    "director": "Jean-Pierre Jeunet",
+    "genre": ["Comedy", "Romance"],
+    "starring_actors": [
+      "Audrey Tautou",
+      "Mathieu Kassovitz",
+      "Rufus",
+      "Lorella Cravotta",
+      "Serge Merlin"
+    ],
+    "rotten_tomatoes_score": 89.0
+  },
+  {
+    "title": "Apocalypse Now",
+    "release_year": 1979,
+    "director": "Francis Ford Coppola",
+    "genre": ["Drama", "War"],
+    "starring_actors": [
+      "Martin Sheen",
+      "Marlon Brando",
+      "Robert Duvall",
+      "Frederic Forrest",
+      "Sam Bottoms"
+    ],
+    "rotten_tomatoes_score": 97.0
+  },
+  {
+    "title": "Apocalypse Now Redux",
+    "release_year": 2001,
+    "director": "Francis Ford Coppola",
+    "genre": ["Drama", "War"],
+    "starring_actors": [
+      "Martin Sheen",
+      "Marlon Brando",
+      "Robert Duvall",
+      "Frederic Forrest",
+      "Sam Bottoms"
+    ],
+    "rotten_tomatoes_score": 93.0
+  },
+  {
+    "title": "A Clockwork Orange",
+    "release_year": 1971,
+    "director": "Stanley Kubrick",
+    "genre": ["Crime", "Drama", "Sci-Fi"],
+    "starring_actors": [
+      "Malcolm McDowell",
+      "Patrick Magee",
+      "Michael Bates",
+      "Warren Clarke",
+      "John Clive"
+    ],
+    "rotten_tomatoes_score": 89.0
+  },
+  {
+    "title": "A Beautiful Mind",
+    "release_year": 2001,
+    "director": "Ron Howard",
+    "genre": ["Biography", "Drama"],
+    "starring_actors": [
+      "Russell Crowe",
+      "Ed Harris",
+      "Jennifer Connelly",
+      "Christopher Plummer",
+      "Paul Bettany"
+    ],
+    "rotten_tomatoes_score": 74.0
+  }
+]
