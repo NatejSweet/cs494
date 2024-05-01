@@ -10,10 +10,10 @@ export default function MySelect(props: { languages: string[] , setLanguage: (la
     }
 
     return (
-        <div>
-            <FormControl sx={{ minWidth: '100%'}}>
-                <InputLabel id="language-select-label">Language </InputLabel>
-                <Select id="language-select" labelId="language-select-label" value={language} onChange={handleChange} sx={{minWidth: '100%'}}>
+        <div className="w-full">
+            <FormControl fullWidth>
+                <InputLabel id="language-select-label">Language</InputLabel>
+                <Select id="language-select" labelId="language-select-label" value={language} onChange={handleChange}>
                     {
                         props.languages.map((language: string, i: number)=>(
                             <MenuItem key={i} value={language}>{language}</MenuItem>
@@ -22,5 +22,5 @@ export default function MySelect(props: { languages: string[] , setLanguage: (la
                 </Select>
             </FormControl>
         </div>
-    );
+);
 }

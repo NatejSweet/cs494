@@ -9,13 +9,12 @@ export default function MyInput(props: { placeholder: string, id: string, setFun
     }
 
     return (
-       <TextField
+       <TextField className="w-full"
           id={props.id}
           onChange={handleChange}
           placeholder={props.placeholder}
           multiline={props.multiline}
           rows={props.rows}
-          sx={{marginTop: '12px', marginBottom: '12px'}}
        />
     );
 }

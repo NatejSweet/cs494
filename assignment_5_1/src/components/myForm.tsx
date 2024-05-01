@@ -1,38 +1,33 @@
 'use client';
-import { FormControl } from '@mui/material';
+import { FormControl, Rating } from '@mui/material';
 import MyTextField from './myTextField';
 import MySelect from './mySelect';
 import MyButton from './myButton';
 import {useEffect, useState} from 'react';
 
 
-export default function MyForm(props: { languages: string[], onSubmit: (entries: {name: string, language: string, comment: string}) => void}) {
-    const [submitForm, setSubmitForm] = useState(false);
+export default function MyForm(props: { languages: string[], onSubmit: (entries: {name: string, language: string, comment: string, rating: number}) => void}) {
+    // const [submitForm, setSubmitForm] = useState(false);
     const [name, setName] = useState('');
     const [language, setLanguage] = useState('');
     const [comment, setComment] = useState('');
+    const [rating, setRating] = useState(0);
 
-useEffect(() => {
-    if (submitForm) {
-        const entry = {
-            'name': name,
-            'language': language,
-            'comment': comment
-        };
-        props.onSubmit(entry);
-        // console.log(entry);
+
+    function submitForm() {
+        props.onSubmit({ name: name, language: language, comment: comment, rating: rating });
     }
-    setSubmitForm(false);
-}, [submitForm]);
 
-  return (
-      <FormControl>
-          <MyTextField multiline={false} rows={1} id='text-name' placeholder='Name' setFunction={setName} />
-          <br></br>
-          <MySelect languages={props.languages} setLanguage = {setLanguage} />
-          <br></br>
-          <MyTextField multiline={true} rows={4} id='text-comment' placeholder='Comment' setFunction={setComment} />
-          <MyButton action = {setSubmitForm}>Submit</MyButton>
-      </FormControl>
-  );
+
+    return (
+        <div className="flex flex-col w-1/3">
+            <FormControl className="flex space-y-4">
+            <MyTextField multiline={false} rows={1} id='text-name' placeholder='Name' setFunction={setName} />
+            <MySelect languages={props.languages} setLanguage={setLanguage} />
+                <MyTextField multiline={true} rows={4} id='text-comment' placeholder='Comment' setFunction={setComment} />
+                <Rating onChange={(event, value) => setRating(value || 0)}/>
+            <MyButton action={submitForm}>Submit</MyButton>
+            </FormControl>
+        </div>
+    );
 }

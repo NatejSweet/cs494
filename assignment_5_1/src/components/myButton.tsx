@@ -1,13 +1,8 @@
 import { Button } from '@mui/material';
-import { useState } from 'react';
 
-export default function MyButton(props: { children: string, action: (action: boolean) => void}) {
-    const [buttonState, setButtonState] = useState(false);
-
+export default function MyButton(props: { children: string, action: () => void}) {
     function handleChange() {
-        let tmpButtonState = !buttonState;
-        setButtonState(tmpButtonState);
-        props.action(tmpButtonState);
+        props.action();
     }
 
     return (
