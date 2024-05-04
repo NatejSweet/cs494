@@ -1,20 +1,24 @@
 import { StyledTableRow, StyledTableCell } from './myStyledTable';
+import { Rating } from '@mui/material';
 import MyButton from './myButton';
 export default function MyTableRow(props: { data: { 
-    task: string;
-    urgency: number;
-    taskId: number;
-}, onRemove: (taskId: number) => void
+    task: string, urgency: number
+}, onRemove: (taskId: number) => void,
+    index: number
     
 }) {
     function handleClick() {
-        props.onRemove(props.data.taskId);
+        props.onRemove(props.index);
     }
     return (
         <StyledTableRow>
-            <StyledTableCell>{props.data.task}</StyledTableCell>
-            <StyledTableCell>{props.data.urgency}</StyledTableCell>
-            <MyButton onClick={handleClick}>Complete Task</MyButton>
+            <StyledTableCell className="text-center overflow-auto break-words">{props.data.task}</StyledTableCell>
+            <StyledTableCell className="text-center">
+                <Rating readOnly value={props.data.urgency} />
+            </StyledTableCell>
+            <StyledTableCell className="text-center">
+                <MyButton action={handleClick}>Complete Task</MyButton>
+            </StyledTableCell>
         </StyledTableRow>
     );
 }

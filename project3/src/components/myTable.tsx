@@ -2,20 +2,17 @@ import {Table} from '@mui/material';
 import MyTableBody from './myTableBody';
 import MyTableHeader from './myTableHeader';
 
-export default function MyTable(props: { headers: string[], data: {
-    task: string;
-    urgency: number;
-    taskId: number;
-}[], setTasks: (tasks: { task: string, urgency: number, taskId: number }[]) => void;
+export default function MyTable(props: { headers: string[], data: { task: string, urgency: number
+}[], deleteEntries: (index: number) => void
 }) {
-    function onRowRemove(taskId: number) {
-        const newTasks = props.data.filter(task => task.taskId !== taskId);
-        props.setTasks(newTasks);
+    function removeRow(index: number) {
+        props.deleteEntries(index);
     }
+
     return (
-        <Table>
+        <Table className="min-w-2/3 h-1/4 max-w-2/3">
             <MyTableHeader headers={props.headers} />
-            <MyTableBody data={props.data} onRowRemove={onRowRemove}/>
+            <MyTableBody data={props.data} removeRow={removeRow}/>
         </Table>
     )
 }

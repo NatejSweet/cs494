@@ -2,22 +2,18 @@ import {TableBody} from '@mui/material';
 import  MyTableRow  from './myTableRow';
 
 export default function MyTableBody(props: { data: { 
-    task: string;
-    urgency: number;
-    taskId: number; 
-}[], onRowRemove: (taskId: number) => void
+    task: string, urgency: number
+}[], removeRow: (taskId: number) => void
 }) {
-    function removeTask(taskId: number) {
-        props.onRowRemove(taskId);
+    function removeRow(taskId: number) {
+        props.removeRow(taskId);
     }
     return (
         <TableBody>
             {props.data.map((data: { 
-                task: string;
-                urgency: number;
-                taskId: number;
+                task: string, urgency: number
   }, index) => (
-                <MyTableRow key={index} data={data} onRemove={removeTask} />
+                <MyTableRow key={index} index={index} data={data} onRemove={removeRow} />
             ))}
         </TableBody>
     )

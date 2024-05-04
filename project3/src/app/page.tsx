@@ -1,29 +1,38 @@
 'use client';
-import MyTable from "../components/myTable";
+import Image from "next/image";
 import MyForm from "../components/myForm";
-import { useState } from 'react';
+import MyTable from "../components/myTable";
+import { useEffect, useState } from "react";
+import { headers } from "next/headers";
+import '../app/globals.css';
 
 export default function Home() {
-  const [tasks, setTasks] = useState<{ task: string, urgency: number, taskId: number }[]>([]);
-  const [taskId, setTaskId] = useState(0); // Initialize taskId state
+  let headers = ['Task', 'Urgency','Completes'];
 
-  const headers = ["Task","Urgency","Complete"];
-  const filteredTasks = tasks.filter(task => task.urgency > 0).sort((a, b) => b.urgency - a.urgency);
+  const [entries, setEntries] = useState<{ task: string, urgency: number }[]>([]); 
+
+  function deleteEntries(index: number) {
+    setEntries(prevEntries => prevEntries.filter((_, i) => i !== index));
+
+
+  }
+
+  function addEntries(entry: { task: string, urgency: number }) {
+    const newEntries = [...entries, entry];
+    newEntries.sort((a, b) => b.urgency - a.urgency);
+    setEntries(newEntries);
+}
 
   return (
-    <main>
+    <main className="flex flex-col min-w-full">
       <header>
-        <h1>My Task Manager</h1>
+        <h1 className="text-4xl"> My Task Mangager </h1>
       </header>
-      
-      <MyForm onSubmit={(task, urgency) => {
-        setTasks([...tasks, { task, urgency, taskId }]);
-        taskId++;//NOT WORKING FUUUUUCK
-        console.log("taskId: "+taskId);
-
-      }} />
-      
-      <MyTable headers={headers} data={filteredTasks} setTasks = {setTasks} />
+      <br/>
+      <div className="flex flex-row min-w-full">
+        <MyForm onSubmit={addEntries}></MyForm>
+        <MyTable headers={headers} data={entries} deleteEntries={deleteEntries}></MyTable>
+      </div>
     </main>
   );
 }
