@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <main className="flex flex-col min-w-full">
       <header>
-        <h1 className="text-4xl"> My Task Mangager </h1>
+        <h1 className="text-4xl "> My Task Mangager </h1>
       </header>
       <br/>
       <div className="flex flex-row min-w-full">
