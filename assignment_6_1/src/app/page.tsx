@@ -1,91 +1,75 @@
 "use client";
-import MyButton from "../components/myButton";
-import MyTextField from "../components/myTextField";
-import { Pokemon } from "../types/Pokemon";
-import { DetailedPokemon } from "../types/DetailedPokemon";
-import MyTableComponents from "../components/myTableComponents";
-import { Select, MenuItem, InputLabel, FormControl } from "@mui/material";
-
 import { useState, useEffect } from "react";
+import {
+  Button,
+  TextField,
+  Typography,
+  FormControl,
+  InputLabel,
+  Select,
+  MenuItem,
+  SelectChangeEvent,
+  Card,
+  CardMedia,
+  CardContent,
+  CardActions,
+  Container,
+} from "@mui/material";
+
+import MyForm from "../components/myForm";
+import MyCard from "../components/myCard";
+
+import { Pokemon } from "../types/Pokemon";
+import { PokemonDetail } from "../types/PokemonDetail";
 
 export default function Home() {
+  // try to send a request to /api/hello
+  // and get the data back as a json
+
   const [pokemon, setPokemon] = useState<Pokemon[]>([]);
-  const [selectedPoke, setSelectedPoke] = useState<Pokemon>({
-    name: "",
-    url: "",
-  });
-  const [poke, setPoke] = useState<DetailedPokemon>({
-    name: "",
-    url: "",
-    types: [],
-    abilities: [],
-    height: 0,
-    weight: 0,
-    thumbnailImage: "",
-  });
+  const [selectedPokemon, setSelectedPokemon] = useState<string>("");
+  const [selectedPokemonUrl, setSelectedPokemonUrl] = useState<string>("");
+  const [pokemonDetail, setPokemonDetail] = useState<PokemonDetail | null>(
+    null
+  );
 
-  const fetchPokemon = async () => {
-    fetch(`/api/pokemon`, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
+  useEffect(() => {
+    if (pokemon.length > 0) {
+      setSelectedPokemon(pokemon[0].name);
+    }
+  }, [pokemon]);
+
+  useEffect(() => {
+    console.log(pokemonDetail);
+  }, [pokemonDetail]);
+
+  useEffect(() => {
+    if (selectedPokemonUrl.length > 0) {
+      fetch(`/api/pokemonDetail?url=${selectedPokemonUrl}`)
+        .then((response) => response.json())
+        .then((json) => setPokemonDetail(json.pokemon))
+        .catch((error) => console.error(error));
+    }
+  }, [selectedPokemonUrl]);
+
+  useEffect(() => {
+    fetch("/api/pokemon")
       .then((response) => response.json())
-      .then((pokemon) => setPokemon(pokemon))
+      .then((json) => setPokemon(json.pokemon))
       .catch((error) => console.error(error));
-  };
-
-  const fetchPoke = async () => {
-    let r = await fetch("/api/detailedPoke?pokeUrl=" + selectedPoke.url, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-    console.log(r);
-    let data: DetailedPokemon = await r.json();
-    console.log(data);
-
-    setPoke({
-      name: data.name,
-      url: selectedPoke.url,
-      types: data.types,
-      abilities: data.abilities,
-      height: data.height,
-      weight: data.weight,
-      thumbnailImage: data.thumbnailImage,
-    });
-  };
-
-  useEffect(() => {
-    fetchPokemon().then(() => setSelectedPoke(pokemon[0]));
   }, []);
-
-  useEffect(() => {
-    if (!selectedPoke) return;
-    fetchPoke();
-  }, [selectedPoke]);
-
-  useEffect(() => {
-    console.log(poke);
-  }, [poke]);
 
   return (
     <main>
-      <h1>Pokemon</h1>
-      <FormControl>
-        <Select
-          onChange={(event) => setSelectedPoke(event.target.value)}
-          value={selectedPoke}
-        >
-          {pokemon.map((p, index) => (
-            <MenuItem key={index} value={p}>
-              {p.name}
-            </MenuItem>
-          ))}
-        </Select>
-      </FormControl>
+      {pokemon.length > 0 ? (
+        <MyForm
+          selectedPokemon={selectedPokemon}
+          setSelectedPokemon={setSelectedPokemon}
+          setSelectedPokemonUrl={setSelectedPokemonUrl}
+          pokemon={pokemon}
+        />
+      ) : null}
+      {pokemonDetail ? <MyCard pokemonDetail={pokemonDetail} /> : null}
     </main>
   );
 }

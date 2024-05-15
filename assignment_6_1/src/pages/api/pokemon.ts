@@ -1,32 +1,21 @@
-import { NextApiRequest, NextApiResponse } from "next";
-import { Pokemon } from "../../types/Pokemon";
+import { NextApiRequest, NextApiResponse } from "next"
 
-export default function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<Pokemon[]>
-) {
-  let pokemon: Pokemon[] = [];
-  fetch("https://pokeapi.co/api/v2/pokemon?offset=0&limit=20", {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  })
-    .then((response) => {
-      if (!response.ok) {
-        console.log(response);
-        throw new Error("Network response was not ok");
-      }
-      return response.json();
-    })
-    .then((data) => {
-      data.results.map((poke: any) => {
-        pokemon.push({
-          name: poke.name,
-          url: poke.url,
-        });
-      });
-      console.log(pokemon);
-      res.status(200).json(pokemon);
-    });
-}
+import { Pokemon } from '../../types/Pokemon';
+
+export default async function handler(
+    req: NextApiRequest,
+    res: NextApiResponse<{pokemon: Pokemon[]}>
+  ) {
+
+    const pokemonArray: Pokemon[] = [];
+    const r = await fetch("https://pokeapi.co/api/v2/pokemon");
+    
+    
+    const jsonData = await r.json();
+    for (let i = 0; i < jsonData.results.length; i++){
+      pokemonArray.push(jsonData.results[i] as Pokemon);
+    }
+
+
+    res.status(200).json({ pokemon: pokemonArray })
+  }    
