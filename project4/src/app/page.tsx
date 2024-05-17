@@ -5,15 +5,16 @@ import {
   MenuItem,
   InputLabel,
   FormControl,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-  Paper,
+  Card,
+  Box,
+  Typography,
+  CardContent,
+  CardMedia,
+  Container,
 } from "@mui/material";
 import { album } from "../types/album";
+import MySelect from "../components/mySelect";
+import MyAlbums from "../components/myAlbums";
 
 export default function Home() {
   const [tags, setTags] = useState<string[]>([]);
@@ -42,41 +43,8 @@ export default function Home() {
 
   return (
     <main>
-      <FormControl className="w-full">
-        <InputLabel>Choose a tag</InputLabel>
-        <Select
-          value={activeTag}
-          onChange={(e) => setActiveTag(e.target.value)}
-        >
-          {tags.map((tag, index) => (
-            <MenuItem key={index} value={tag}>
-              {tag}
-            </MenuItem>
-          ))}
-        </Select>
-      </FormControl>
-      <TableContainer component={Paper}>
-        <Table>
-          <TableHead>
-            <TableRow>
-              <TableCell>Image</TableCell>
-              <TableCell>Name</TableCell>
-              <TableCell>Artist</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {albums.map((album, index) => (
-              <TableRow key={index}>
-                <TableCell>
-                  <img src={album.image} alt={album.name} />
-                </TableCell>
-                <TableCell>{album.name}</TableCell>
-                <TableCell>{album.artist}</TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
+      <MySelect tags={tags} activeTag={activeTag} setActiveTag={setActiveTag} />
+      <MyAlbums albums={albums} />
     </main>
   );
 }
