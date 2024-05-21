@@ -13,6 +13,11 @@ const Profile = () => {
         <div>
           <h3> User: {user?.displayName}</h3>
           <h3> Email: {user?.email}</h3>
+          {/* <h3> Occupation: {user?.occupation}</h3>
+          <h3> Organization: {user?.organization}</h3>
+          <h3> LinkedIn: {user?.linkedIn}</h3>
+          <h3> Github: {user?.github}</h3>
+          <button onclick={editProfile}>Edit Profile</button> */}
         </div>
       ) : (
         <div>

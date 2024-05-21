@@ -8,6 +8,7 @@ export default function Home() {
   return (
     <UserContextProvider>
       <main>
+        <header> My Super Cool Website! </header>
         <Container
           sx={{
             display: "flex",
