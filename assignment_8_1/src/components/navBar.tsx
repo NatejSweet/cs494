@@ -11,10 +11,8 @@ import {
   Tooltip,
   Typography,
 } from "@mui/material";
-import { useRouter } from "next/router"; // Corrected import
+import { useRouter } from "next/router";
 import Link from "next/link";
-import { usePetsContext } from "@/context/petsContext";
-
 export default function NavBar() {
   // const router = useRouter();
   const links = [
