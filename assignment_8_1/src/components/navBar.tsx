@@ -12,32 +12,30 @@ import {
   Typography,
 } from "@mui/material";
 import { useRouter } from "next/router"; // Corrected import
+import Link from "next/link";
+import { usePetsContext } from "@/context/petsContext";
 
 export default function NavBar() {
-  const sections: string[] = ["Dogs", "Cats", "Favorites"];
-  const router = useRouter();
-  const handleSectionClick = (section: string) => {
-    router.push(`/${section.toLowerCase()}`);
-  };
+  // const router = useRouter();
+  const links = [
+    { name: "Home", url: "/" },
+    { name: "Dogs", url: "/dogs" },
+    { name: "Cats", url: "/cats" },
+    { name: "Favorites", url: "/favorites" },
+  ];
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters className="flex justify-center items-center">
-          {sections.map((section) => (
-            <MenuItem key={section}>
-              <Button
-                onClick={() => handleSectionClick(section)}
-                className="text-white"
-                component="button"
-              >
-                {section}
-              </Button>
+          {links.map((link) => (
+            <MenuItem key={link.name}>
+              <Link href={link.url} passHref>
+                <Button className="text-white" component="button">
+                  {link.name}
+                </Button>
+              </Link>
             </MenuItem>
           ))}
-          <MenuItem>
-            <Button onClick={() => router.back()}>Back</Button>{" "}
-            {/* Corrected onClick handler */}
-          </MenuItem>
         </Toolbar>
       </Container>
     </AppBar>

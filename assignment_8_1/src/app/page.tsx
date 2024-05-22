@@ -1,10 +1,13 @@
 "use client";
 import NavBar from "../components/navBar";
+import { PetContextProvider } from "@/context/petsContext";
 
 export default function Home() {
   return (
-    <main>
-      <NavBar />
-    </main>
+    <PetContextProvider>
+      <main>
+        <NavBar />
+      </main>
+    </PetContextProvider>
   );
 }

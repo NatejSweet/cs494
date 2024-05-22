@@ -4,46 +4,45 @@ import "../app/globals.css";
 import { useEffect, useState } from "react";
 import { getCat } from "../assets/getPet";
 import { Pet } from "../assets/types/pet";
-import { Table } from "@mui/material";
-
+import { Table, Container } from "@mui/material";
+import PetCard from "../components/petCard";
+import { PetContextProvider } from "../context/petsContext";
+import { usePetsContext } from "@/context/petsContext";
 export default function Cats() {
   const [cats, setCats] = useState<Pet[]>([]);
 
+  function toggleFavorite(pet: Pet) {
+    const updatedCats = cats.map((cat) => {
+      if (cat.name === pet.name) {
+        return { ...cat, favorited: !cat.favorited };
+      }
+      return cat;
+    });
+    setCats(updatedCats);
+  }
+
   useEffect(() => {
-    getCat().then((data: Pet) => setCats(cats.concat(data)));
+    for (let i = 0; i < 5; i++) {
+      getCat().then((data: Pet) => setCats((prevCats) => [...prevCats, data]));
+    }
   }, []);
 
   useEffect(() => console.log(cats), [cats]);
   return (
     <main>
-      <NavBar />
-      <h1>Cats</h1>
-      <Table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Photo</th>
-            <th>Type</th>
-            <th>Gender</th>
-          </tr>
-        </thead>
-        <tbody>
-          {cats.map((cat: Pet, i: number) => (
-            <tr key={i}>
-              <td>{cat.name}</td>
-              <td>
-                <img
-                  src={cat.image}
-                  alt={cat.name}
-                  className="max-w-1/6 max-h-1/6"
-                />
-              </td>
-              <td>{cat.type}</td>
-              <td>{cat.gender}</td>
-            </tr>
-          ))}
-        </tbody>
-      </Table>
+      <PetContextProvider>
+        <NavBar />
+        <h1>Cats</h1>
+        <Container sx={{ display: "flex", flexWrap: "wrap" }}>
+          {cats.length > 0 ? (
+            cats.map((cat, i) => (
+              <PetCard key={i} pet={cat} toggleFavorite={toggleFavorite} />
+            ))
+          ) : (
+            <div></div>
+          )}
+        </Container>
+      </PetContextProvider>
     </main>
   );
 }

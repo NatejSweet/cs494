@@ -3,4 +3,5 @@ export type Pet = {
   image: string;
   type: string;
   gender: string;
+  favorited: boolean;
 };

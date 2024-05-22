@@ -10,6 +10,7 @@ export async function getCat() {
     image: imgJ[0].url,
     type: "Cat",
     gender: dataJ.results[0].gender,
+    favorited: false,
   };
   return cat;
 }
@@ -24,6 +25,7 @@ export async function getDog() {
     image: imgJ.message,
     type: "Dog",
     gender: dataJ.results[0].gender,
+    favorited: false,
   };
   return dog;
 }
