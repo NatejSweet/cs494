@@ -1,13 +1,5 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
-
-export const metadata: Metadata = {
-  title: "In class 8-1",
-  description: "Nathan Sweet",
-};
+"use client";
+import { AnimalsContextProvider } from "@/context/animalsContext";
 
 export default function RootLayout({
   children,
@@ -15,8 +7,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    <AnimalsContextProvider>
     <html lang="en">
       <body>{children}</body>
     </html>
+    </AnimalsContextProvider>
   );
 }
