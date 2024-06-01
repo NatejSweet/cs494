@@ -26,6 +26,10 @@ export function UserContextProvider({ children }: { children: ReactNode }) {
     return unsubscribe;
   }, []);
 
+  useEffect(() => {
+    console.log("user:", user);
+  }, [user]);
+
   return (
     <userContext.Provider value={{ user }}>{children}</userContext.Provider>
   );
