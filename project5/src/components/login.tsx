@@ -1,6 +1,5 @@
 import { useUserContext, googleSignIn, logOut } from "../context/userContext";
-import { useEffect, useState } from "react";
-
+import { Button, Typography, Box } from '@mui/material';
 const Login = () => {
   const user = useUserContext();
 
@@ -13,23 +12,14 @@ const Login = () => {
   }
 
   return (
-    <div style={{}}>
-      <p>
-        <b>login.tsx</b>
-      </p>
-      <div>
+      <Box>
         {user ? (
-          <button onClick={handleLogOut}>Log Out</button>
+          <Button sx={{ border: '1px solid #000' }} variant="contained" onClick={handleLogOut}>Log Out</Button>
         ) : (
-          <div>
-            <p>
-              <button onClick={handleGoogleSignIn}>Sign in with Google</button>
-            </p>
-          </div>
+            <Button sx={{ border: '1px solid #000' }} variant="contained" onClick={handleGoogleSignIn}>Sign in with Google</Button>
         )}
-      </div>
-    </div>
+      </Box>
   );
-};
+}
 
 export default Login;
