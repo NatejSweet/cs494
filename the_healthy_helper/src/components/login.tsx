@@ -16,7 +16,7 @@ const Login = () => {
   }
 
   return (
-    <Box>
+    <Box sx={{ width: "100%" }}>
       {user ? (
         <Button
           sx={{ border: "1px solid #000" }}

@@ -4,7 +4,15 @@ export default function MonsterCard() {
   const user = useUserContext();
 
   return user ? (
-    <Card sx={{ display: "flex", padding: 0 }}>
+    <Card
+      sx={{
+        display: "flex",
+        padding: "auto",
+        width: "auto",
+        marginRight: "5px",
+        marginLeft: "5px",
+      }}
+    >
       <Box sx={{ display: "flex", flexDirection: "column", padding: 0 }}>
         <CardContent sx={{ flex: "1 0 auto" }}>
           <Typography component="div" variant="h5">
