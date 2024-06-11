@@ -1,16 +1,18 @@
 import { Box, Card, CardContent, CardMedia, Typography } from "@mui/material";
 import { useUserContext } from "../context/userContextProvider";
-export default function MonsterCard() {
+import { Monster } from "../types/monster";
+export default function MonsterCard(props: { monster: Monster }) {
   const user = useUserContext();
 
   return user ? (
     <Card
       sx={{
         display: "flex",
-        padding: "auto",
+        padding: "5px",
         width: "auto",
         marginRight: "5px",
         marginLeft: "5px",
+        border: "1px solid black",
       }}
     >
       <Box sx={{ display: "flex", flexDirection: "column", padding: 0 }}>

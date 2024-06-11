@@ -16,7 +16,7 @@ const Login = () => {
   }
 
   return (
-    <Box sx={{ width: "100%" }}>
+    <Box sx={{ width: "100%", margin: "auto" }}>
       {user ? (
         <Button
           sx={{ border: "1px solid #000" }}
@@ -27,7 +27,7 @@ const Login = () => {
         </Button>
       ) : (
         <Button
-          sx={{ border: "1px solid #000" }}
+          sx={{ border: "1px solid #000", margin: "auto" }}
           variant="contained"
           onClick={handleGoogleSignIn}
         >

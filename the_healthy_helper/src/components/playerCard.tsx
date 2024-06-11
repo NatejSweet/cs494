@@ -14,7 +14,7 @@ import { useUserContext } from "../context/userContextProvider";
 import { useState, useEffect } from "react";
 import { Player } from "../types/player";
 
-export default function PlayerCard(props: Player) {
+export default function PlayerCard(props: { player: Player }) {
   let User = useUserContext();
   let [isTmpButtonDisabled, setIsTmpButtonDisabled] = useState(true);
   let [toggleAddSubButtons, setToggleAddSubButtons] = useState(false);
@@ -44,10 +44,12 @@ export default function PlayerCard(props: Player) {
       sx={{
         display: "flex",
         flexDirection: "row",
-        padding: 0,
+        padding: "5px",
         height: "auto",
-        marginRight: 0,
-        marginLeft: "auto",
+        margin: 0,
+        marginTop: "5px",
+        marginBottom: "5px",
+        border: "1px solid black",
         width: "100%",
       }}
     >
@@ -67,12 +69,14 @@ export default function PlayerCard(props: Player) {
         }}
       >
         <Typography component="div" variant="h6">
-          Name: {props.name}
+          Name: {props.player.name}
         </Typography>
-        <Typography component="div">Max HP: {props.maxHealth}</Typography>
-        <Typography component="div">Temp HP: {props.armor}</Typography>
         <Typography component="div">
-          Current HP: {props.currentHealth}
+          Max HP: {props.player.maxHealth}
+        </Typography>
+        <Typography component="div">Temp HP: {props.player.armor}</Typography>
+        <Typography component="div">
+          Current HP: {props.player.currentHealth}
         </Typography>
         <Box sx={{ display: "flex", flexDirection: "row" }}>
           <ButtonGroup>
@@ -131,7 +135,7 @@ export default function PlayerCard(props: Player) {
         />
         <CardContent>
           <Box>
-            <Typography component="div">Armor: {props.armor}</Typography>
+            <Typography component="div">Armor: {props.player.armor}</Typography>
           </Box>
         </CardContent>
       </Box>

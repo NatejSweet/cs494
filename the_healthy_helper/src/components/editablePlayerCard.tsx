@@ -11,16 +11,14 @@ import {
 import { useUserContext } from "../context/userContextProvider";
 import { Player } from "../types/player";
 import { db } from "../app/firebase";
+import { usePlayersContext } from "../context/playerContextProvider";
 
-export default function EditablePlayerCard(props: player) {
+export default function EditablePlayerCard(props: { index: number }) {
   const user = useUserContext();
-  const [player, setPlayer] = useState<Player>({
-    name: "",
-    armor: 0,
-    maxHealth: 0,
-    currentHealth: 0,
-    tmpHealth: 0,
-  });
+  const { players, setPlayers } = usePlayersContext();
+  if (!players || !setPlayers) {
+    throw new Error("Players context not found");
+  }
 
   useEffect(() => {
     if (user) {
@@ -36,25 +34,37 @@ export default function EditablePlayerCard(props: player) {
   }, [user]);
 
   function handleNameChange(e: React.ChangeEvent<HTMLInputElement>) {
-    setPlayer({ ...player, name: e.target.value });
+    if (Array.isArray(players) && setPlayers) {
+      const updatedPlayers = [...players];
+      updatedPlayers[props.index] = {
+        ...updatedPlayers[props.index],
+        name: e.target.value,
+      };
+      setPlayers(updatedPlayers);
+    }
   }
 
   function handleArmorChange(e: React.ChangeEvent<HTMLInputElement>) {
-    setPlayer({ ...player, armor: parseInt(e.target.value) });
+    if (players && setPlayers) {
+      const updatedPlayers = [...players];
+      updatedPlayers[props.index] = {
+        ...updatedPlayers[props.index],
+        armor: parseInt(e.target.value),
+      };
+      setPlayers(updatedPlayers);
+    }
   }
 
   function handleMaxHealthChange(e: React.ChangeEvent<HTMLInputElement>) {
-    setPlayer({ ...player, maxHealth: parseInt(e.target.value) });
+    if (players && setPlayers) {
+      const updatedPlayers = [...players];
+      updatedPlayers[props.index] = {
+        ...updatedPlayers[props.index],
+        maxHealth: parseInt(e.target.value),
+      };
+      setPlayers(updatedPlayers);
+    }
   }
-
-  function handleCurrentHealthChange(e: React.ChangeEvent<HTMLInputElement>) {
-    setPlayer({ ...player, currentHealth: parseInt(e.target.value) });
-  }
-
-  function handleTmpHealthChange(e: React.ChangeEvent<HTMLInputElement>) {
-    setPlayer({ ...player, tmpHealth: parseInt(e.target.value) });
-  }
-
   function handleSave() {
     if (user) {
       // db.collection("users").doc(user.uid).collection("characters").doc("player").set(player);
@@ -71,6 +81,7 @@ export default function EditablePlayerCard(props: player) {
         marginRight: 0,
         marginLeft: "auto",
         width: "100%",
+        border: "1px solid black",
       }}
     >
       <Box
@@ -83,19 +94,19 @@ export default function EditablePlayerCard(props: player) {
       >
         <TextField
           label="Name"
-          value={props.name}
+          value={players[props.index].name}
           onChange={handleNameChange}
           sx={{ minWidth: "100%" }}
         />
         <TextField
           label="Armor"
-          value={props.armor}
+          value={players[props.index].armor}
           onChange={handleArmorChange}
           sx={{ minWidth: "100%" }}
         />
         <TextField
           label="Max Health"
-          value={props.maxHealth}
+          value={players[props.index].maxHealth}
           onChange={handleMaxHealthChange}
           sx={{ minWidth: "100%" }}
         />
