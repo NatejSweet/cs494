@@ -15,6 +15,22 @@ const playersContext = createContext<
       handleHealing: (index: number, health: number) => void;
       handleTmpHealing: (index: number, health: number) => void;
       handleDamage: (index: number, health: number) => void;
+      savePlayers: () => void;
+      handleNameChange: (
+        index: number,
+        e: React.ChangeEvent<HTMLInputElement>
+      ) => void;
+      handleArmorChange: (
+        index: number,
+        e: React.ChangeEvent<HTMLInputElement>
+      ) => void;
+      handleMaxHealthChange: (
+        index: number,
+        e: React.ChangeEvent<HTMLInputElement>
+      ) => void;
+      handleRemovePlayer: (index: number) => void;
+      handleResetHealth: () => void;
+      checkHealth: () => void;
     }
   | undefined
 >(undefined);
@@ -32,6 +48,56 @@ export function PlayersContextProvider({ children }: { children: ReactNode }) {
   ]);
 
   const [editPlayers, setEditPlayers] = useState(false);
+
+  const handleNameChange: (
+    index: number,
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => void = (index, e) => {
+    if (players) {
+      const updatedPlayers = [...players];
+      updatedPlayers[index] = {
+        ...updatedPlayers[index],
+        name: e.target.value,
+      };
+      setPlayers(updatedPlayers);
+    }
+  };
+
+  const handleArmorChange = (
+    index: number,
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    if (players) {
+      const updatedPlayers = [...players];
+      updatedPlayers[index] = {
+        ...updatedPlayers[index],
+        armor: e.target.value ? parseInt(e.target.value) : 0,
+      };
+      setPlayers(updatedPlayers);
+    }
+  };
+
+  const handleMaxHealthChange = (
+    index: number,
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    if (players) {
+      const updatedPlayers = [...players];
+      updatedPlayers[index] = {
+        ...updatedPlayers[index],
+        maxHealth: e.target.value ? parseInt(e.target.value) : 0,
+      };
+      setPlayers(updatedPlayers);
+    }
+  };
+
+  const handleRemovePlayer = (index: number) => {
+    if (players && setPlayers) {
+      const updatedPlayers = [...players];
+      updatedPlayers.splice(index, 1);
+      setPlayers(updatedPlayers);
+    }
+  };
 
   const handleHealing = (index: number, health: number) => {
     if (players) {
@@ -88,7 +154,7 @@ export function PlayersContextProvider({ children }: { children: ReactNode }) {
     }
   };
 
-  const updatePlayerData = () => {
+  const savePlayers = () => {
     if (user?.uid) {
       const docRef = doc(db, "players", user.uid);
       if (players) {
@@ -99,6 +165,27 @@ export function PlayersContextProvider({ children }: { children: ReactNode }) {
         }));
         setDoc(docRef, { playerData });
       }
+    }
+  };
+
+  const handleResetHealth = () => {
+    if (players) {
+      const updatedPlayers = players.map((player) => ({
+        ...player,
+        currentHealth: player.maxHealth,
+        tmpHealth: 0,
+      }));
+      setPlayers(updatedPlayers);
+    }
+  };
+
+  const checkHealth = () => {
+    if (players) {
+      const updatedPlayers = players.map((player) => ({
+        ...player,
+        currentHealth: Math.min(player.currentHealth, player.maxHealth),
+      }));
+      setPlayers(updatedPlayers);
     }
   };
 
@@ -122,10 +209,6 @@ export function PlayersContextProvider({ children }: { children: ReactNode }) {
     }
   }, [user?.uid]);
 
-  useEffect(() => {
-    updatePlayerData();
-  }, [players]);
-
   return (
     <playersContext.Provider
       value={{
@@ -136,6 +219,13 @@ export function PlayersContextProvider({ children }: { children: ReactNode }) {
         handleHealing,
         handleTmpHealing,
         handleDamage,
+        savePlayers,
+        handleRemovePlayer,
+        handleNameChange,
+        handleArmorChange,
+        handleMaxHealthChange,
+        handleResetHealth,
+        checkHealth,
       }}
     >
       {children}
@@ -153,5 +243,12 @@ export function usePlayersContext() {
     handleHealing: context?.handleHealing,
     handleTmpHealing: context?.handleTmpHealing,
     handleDamage: context?.handleDamage,
+    savePlayers: context?.savePlayers,
+    handleRemovePlayer: context?.handleRemovePlayer,
+    handleNameChange: context?.handleNameChange,
+    handleArmorChange: context?.handleArmorChange,
+    handleMaxHealthChange: context?.handleMaxHealthChange,
+    handleResetHealth: context?.handleResetHealth,
+    checkHealth: context?.checkHealth,
   };
 }

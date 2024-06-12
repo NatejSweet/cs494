@@ -1,6 +1,7 @@
 import { TextField, Box, Button } from "@mui/material";
 import { useMonstersContext } from "../../context/monstersContextProvider";
 import { useState } from "react";
+import monsterNames from "../../assets/data/monsterNames.json";
 export default function MonsterForm() {
   const { monsters, setMonsters } = useMonstersContext();
   const [hp, setHp] = useState(0);
@@ -12,11 +13,13 @@ export default function MonsterForm() {
       if (numberToSpawn > 0 && hp > 0) {
         const newMonsters = [...monsters];
         for (let i = 0; i < numberToSpawn; i++) {
+          const randomName =
+            monsterNames[Math.floor(Math.random() * monsterNames.length)];
           newMonsters.push({
             armor: armor,
             maxHealth: hp,
             currentHealth: hp,
-            name: `Monster ${newMonsters.length}`,
+            name: randomName,
           });
         }
         setMonsters(newMonsters);

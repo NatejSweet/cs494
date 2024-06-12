@@ -5,9 +5,24 @@ import { usePlayersContext } from "../../context/playerContextProvider";
 import { Box } from "@mui/material";
 
 export default function PlayersControls() {
-  const { editPlayers, setEditPlayers, players, setPlayers } =
-    usePlayersContext();
-  if (!players || !setPlayers || editPlayers == null || !setEditPlayers) {
+  const {
+    editPlayers,
+    setEditPlayers,
+    players,
+    setPlayers,
+    savePlayers,
+    handleResetHealth,
+    checkHealth,
+  } = usePlayersContext();
+  if (
+    !players ||
+    !setPlayers ||
+    editPlayers == null ||
+    !setEditPlayers ||
+    !savePlayers ||
+    !handleResetHealth ||
+    !checkHealth
+  ) {
     console.log(players);
     console.log(setPlayers);
     console.log(editPlayers);
@@ -15,12 +30,21 @@ export default function PlayersControls() {
     throw new Error("Players context not found");
   }
   const user = useUserContext();
+  const handleEdit: () => void = () => {
+    if (editPlayers) {
+      setEditPlayers(false);
+      checkHealth();
+      savePlayers();
+    } else {
+      setEditPlayers(true);
+    }
+  };
 
   return user ? (
     <Box sx={{ width: "100%" }}>
       <Button
         onClick={() => {
-          setEditPlayers(!editPlayers);
+          handleEdit();
         }}
       >
         {editPlayers ? "Done" : "Edit"}
@@ -42,7 +66,15 @@ export default function PlayersControls() {
         >
           Add Player
         </Button>
-      ) : null}
+      ) : (
+        <Button
+          onClick={() => {
+            handleResetHealth();
+          }}
+        >
+          Reset Health
+        </Button>
+      )}
     </Box>
   ) : null;
 }

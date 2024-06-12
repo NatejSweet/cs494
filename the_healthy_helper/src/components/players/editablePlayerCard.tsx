@@ -1,77 +1,24 @@
-import React, { useEffect, useState } from "react";
-import {
-  Card,
-  CardContent,
-  CardMedia,
-  Box,
-  Typography,
-  Button,
-  TextField,
-} from "@mui/material";
-import { useUserContext } from "../../context/userContextProvider";
+import { Card, CardMedia, Box, Button, TextField } from "@mui/material";
 import { Player } from "../../types/player";
-import { db } from "../../app/firebase";
 import { usePlayersContext } from "../../context/playerContextProvider";
 
 export default function EditablePlayerCard(props: {
   player: Player;
   index: number;
 }) {
-  const user = useUserContext();
-  const { players, setPlayers } = usePlayersContext();
-  if (!players || !setPlayers) {
+  const {
+    handleNameChange,
+    handleArmorChange,
+    handleMaxHealthChange,
+    handleRemovePlayer,
+  } = usePlayersContext();
+  if (
+    handleNameChange == null ||
+    handleArmorChange == null ||
+    handleMaxHealthChange == null ||
+    handleRemovePlayer == null
+  ) {
     throw new Error("Players context not found");
-  }
-
-  useEffect(() => {
-    if (user) {
-      // const playerRef = db.collection("users").doc(user.uid).collection("characters").doc("player");
-      // playerRef.get().then((doc) => {
-      //     if (doc.exists) {
-      //         setPlayer(doc.data() as Player);
-      // }
-
-      // });
-      console.log(user);
-    }
-  }, [user]);
-
-  function handleNameChange(e: React.ChangeEvent<HTMLInputElement>) {
-    if (Array.isArray(players) && setPlayers) {
-      const updatedPlayers = [...players];
-      updatedPlayers[props.index] = {
-        ...updatedPlayers[props.index],
-        name: e.target.value,
-      };
-      setPlayers(updatedPlayers);
-    }
-  }
-
-  function handleArmorChange(e: React.ChangeEvent<HTMLInputElement>) {
-    if (players && setPlayers) {
-      const updatedPlayers = [...players];
-      updatedPlayers[props.index] = {
-        ...updatedPlayers[props.index],
-        armor: parseInt(e.target.value),
-      };
-      setPlayers(updatedPlayers);
-    }
-  }
-
-  function handleMaxHealthChange(e: React.ChangeEvent<HTMLInputElement>) {
-    if (players && setPlayers) {
-      const updatedPlayers = [...players];
-      updatedPlayers[props.index] = {
-        ...updatedPlayers[props.index],
-        maxHealth: parseInt(e.target.value),
-      };
-      setPlayers(updatedPlayers);
-    }
-  }
-  function handleSave() {
-    if (user) {
-      // db.collection("users").doc(user.uid).collection("characters").doc("player").set(player);
-    }
   }
 
   return (
@@ -97,20 +44,26 @@ export default function EditablePlayerCard(props: {
       >
         <TextField
           label="Name"
-          value={players[props.index].name}
-          onChange={handleNameChange}
+          value={props.player.name}
+          onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+            handleNameChange(props.index, event)
+          }
           sx={{ minWidth: "100%" }}
         />
         <TextField
           label="Armor"
-          value={players[props.index].armor}
-          onChange={handleArmorChange}
+          value={props.player.armor}
+          onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+            handleArmorChange(props.index, event)
+          }
           sx={{ minWidth: "100%" }}
         />
         <TextField
           label="Max Health"
-          value={players[props.index].maxHealth}
-          onChange={handleMaxHealthChange}
+          value={props.player.maxHealth}
+          onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+            handleMaxHealthChange(props.index, event)
+          }
           sx={{ minWidth: "100%" }}
         />
       </Box>
@@ -119,6 +72,13 @@ export default function EditablePlayerCard(props: {
           width: "50%",
         }}
       >
+        <Button
+          onClick={() => {
+            handleRemovePlayer(props.index);
+          }}
+        >
+          Delete
+        </Button>
         <CardMedia
           component="img"
           sx={{ maxWidth: "30%", maxHeight: "70%" }}
