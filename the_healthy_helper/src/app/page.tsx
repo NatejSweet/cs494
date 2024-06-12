@@ -1,87 +1,74 @@
 "use client";
 import Image from "next/image";
 import Login from "../components/login";
-import Players from "../components/players";
-import MonsterCard from "../components/monsterCard";
+import Players from "../components/players/players";
+import Monsters from "../components/monsters/monsters";
 import DiceColumn from "../components/diceColumn";
-import MonsterForm from "../components/monsterForm";
-import PlayersControls from "../components/playersControls";
+import MonsterForm from "../components/monsters/monsterForm";
+import PlayersControls from "../components/players/playersControls";
 import { Box, Button, Container } from "@mui/material";
 import { useState, useEffect, use } from "react";
 import { UserContextProvider } from "../context/userContextProvider";
-import {
-  PlayersContextProvider,
-  usePlayersContext,
-} from "../context/playerContextProvider";
+import { PlayersContextProvider } from "../context/playerContextProvider";
+import { MonstersContextProvider } from "@/context/monstersContextProvider";
 import { Player } from "../types/player";
 import { Monster } from "../types/monster";
 import { set } from "firebase/database";
 
 export default function Home() {
-  let [monsters, setMonsters] = useState<Monster[]>([]);
-
   return (
     <UserContextProvider>
       <PlayersContextProvider>
-        <main>
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "space-between",
-              padding: "3px",
-              margin: 0,
-              width: "100%",
-            }}
-          >
-            <Container sx={{ width: "15%", padding: 0, margin: 0 }}>
-              <DiceColumn />
-            </Container>
-            <Box sx={{ width: "55%", padding: 0, margin: 0 }}>
-              <MonsterForm />
-              <Container
-                sx={{
-                  width: "100%",
-                  padding: 0,
-                  margin: 0,
-                  display: "grid",
-                  gridTemplateColumns: "repeat(3, 1fr)",
-                  gridRowGap: "10px",
-                  alignItems: "start",
-                }}
-              >
-                {monsters.map((monster: Monster, index: number) => {
-                  return <MonsterCard key={index} monster={monster} />;
-                })}
-              </Container>
-            </Box>
-            <Container
+        <MonstersContextProvider>
+          <main>
+            <Box
               sx={{
-                width: "30%",
-                padding: 0,
-                margin: 0,
                 display: "flex",
-                flexDirection: "column",
+                flexDirection: "row",
                 justifyContent: "space-between",
-                overflow: "auto",
+                padding: "3px",
+                margin: 0,
+                width: "100%",
+                height: "100vh",
               }}
             >
               <Box
                 sx={{
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent: "space-between",
+                  width: "15%",
+                  height: "100%",
                   padding: 0,
-                  margin: 0,
+                  margin: "3px",
+                  overflowY: "auto",
                 }}
               >
-                <PlayersControls />
                 <Login />
+                <DiceColumn />
               </Box>
-              <Players />
-            </Container>
-          </Box>
-        </main>
+              <Box
+                sx={{
+                  width: "55%",
+                  height: "100%",
+                  padding: 0,
+                  margin: "3px",
+                  overflowY: "auto",
+                }}
+              >
+                <Monsters />
+              </Box>
+              <Box
+                sx={{
+                  width: "30%",
+                  height: "100%",
+                  padding: 0,
+                  margin: "3px",
+                  overflowY: "auto",
+                }}
+              >
+                <Players />
+              </Box>
+            </Box>
+          </main>
+        </MonstersContextProvider>
       </PlayersContextProvider>
     </UserContextProvider>
   );

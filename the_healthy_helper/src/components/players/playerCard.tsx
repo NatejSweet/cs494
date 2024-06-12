@@ -10,15 +10,19 @@ import {
   ButtonGroup,
   ToggleButton,
 } from "@mui/material";
-import { useUserContext } from "../context/userContextProvider";
+import { useUserContext } from "../../context/userContextProvider";
+import { usePlayersContext } from "../../context/playerContextProvider";
 import { useState, useEffect } from "react";
-import { Player } from "../types/player";
+import { Player } from "../../types/player";
+import { set } from "firebase/database";
 
-export default function PlayerCard(props: { player: Player }) {
+export default function PlayerCard(props: { player: Player; index: number }) {
   let User = useUserContext();
   let [isTmpButtonDisabled, setIsTmpButtonDisabled] = useState(true);
-  let [toggleAddSubButtons, setToggleAddSubButtons] = useState(false);
-  let [toggleMaxTempButtons, setToggleMaxTempButtons] = useState(true);
+  let [toggleAddSubButtons, setToggleAddSubButtons] = useState(false); //starting on -
+  let [toggleMaxTempButtons, setToggleMaxTempButtons] = useState(true); //starting on max
+  let [numChange, setNumChange] = useState(0);
+  const { handleHealing, handleTmpHealing, handleDamage } = usePlayersContext();
 
   const handlePlusClick = () => {
     setToggleAddSubButtons(true);
@@ -39,7 +43,26 @@ export default function PlayerCard(props: { player: Player }) {
     setToggleMaxTempButtons(false);
   };
 
-  return User ? (
+  const handleApplyClick = () => {
+    if (numChange > 0 && handleHealing && handleTmpHealing && handleDamage) {
+      if (toggleAddSubButtons) {
+        //adding
+        if (toggleMaxTempButtons) {
+          //max health
+          handleHealing(props.index, numChange);
+        } else {
+          //temp health
+          handleTmpHealing(props.index, numChange);
+        }
+      } else {
+        //subtracting
+        handleDamage(props.index, numChange);
+      }
+      setNumChange(0);
+    }
+  };
+
+  return (
     <Card
       sx={{
         display: "flex",
@@ -50,7 +73,7 @@ export default function PlayerCard(props: { player: Player }) {
         marginTop: "5px",
         marginBottom: "5px",
         border: "1px solid black",
-        width: "100%",
+        width: "99%",
       }}
     >
       <Box
@@ -74,7 +97,9 @@ export default function PlayerCard(props: { player: Player }) {
         <Typography component="div">
           Max HP: {props.player.maxHealth}
         </Typography>
-        <Typography component="div">Temp HP: {props.player.armor}</Typography>
+        <Typography component="div">
+          Temp HP: {props.player.tmpHealth}
+        </Typography>
         <Typography component="div">
           Current HP: {props.player.currentHealth}
         </Typography>
@@ -116,7 +141,17 @@ export default function PlayerCard(props: { player: Player }) {
           </ButtonGroup>
         </Box>
         <Box sx={{ display: "flex", flexDirection: "row" }}>
-          <TextField id="outlined-basic" label="Outlined" variant="outlined" />
+          <TextField
+            id="outlined-basic"
+            label={toggleAddSubButtons ? "Healing" : "Damage"}
+            value={numChange}
+            onChange={(e) => setNumChange(Number(e.target.value))}
+            variant="outlined"
+            sx={{ width: "70%" }}
+          />
+          <Button sx={{ width: "30%" }} onClick={handleApplyClick}>
+            Apply
+          </Button>
         </Box>
       </Box>
       <Box
@@ -140,7 +175,5 @@ export default function PlayerCard(props: { player: Player }) {
         </CardContent>
       </Box>
     </Card>
-  ) : (
-    <p>no player</p>
   );
 }

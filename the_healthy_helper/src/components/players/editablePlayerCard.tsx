@@ -8,12 +8,15 @@ import {
   Button,
   TextField,
 } from "@mui/material";
-import { useUserContext } from "../context/userContextProvider";
-import { Player } from "../types/player";
-import { db } from "../app/firebase";
-import { usePlayersContext } from "../context/playerContextProvider";
+import { useUserContext } from "../../context/userContextProvider";
+import { Player } from "../../types/player";
+import { db } from "../../app/firebase";
+import { usePlayersContext } from "../../context/playerContextProvider";
 
-export default function EditablePlayerCard(props: { index: number }) {
+export default function EditablePlayerCard(props: {
+  player: Player;
+  index: number;
+}) {
   const user = useUserContext();
   const { players, setPlayers } = usePlayersContext();
   if (!players || !setPlayers) {
@@ -71,16 +74,16 @@ export default function EditablePlayerCard(props: { index: number }) {
     }
   }
 
-  return user ? (
+  return (
     <Card
       sx={{
         display: "flex",
         flexDirection: "row",
-        padding: 0,
+        padding: "5px",
         height: "auto",
         marginRight: 0,
         marginLeft: "auto",
-        width: "100%",
+        width: "99%",
         border: "1px solid black",
       }}
     >
@@ -124,7 +127,5 @@ export default function EditablePlayerCard(props: { index: number }) {
         />
       </Box>
     </Card>
-  ) : (
-    <p>no player</p>
   );
 }
