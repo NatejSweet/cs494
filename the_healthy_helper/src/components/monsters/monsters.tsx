@@ -7,7 +7,7 @@ export default function Monsters() {
   const { monsters } = useMonstersContext();
   const user = useUserContext();
 
-  return user ? (
+  return (
     <Box sx={{ width: "100%", padding: 0, margin: 0 }}>
       <MonsterForm />
       <Container
@@ -22,9 +22,9 @@ export default function Monsters() {
         }}
       >
         {monsters?.map((monster, index) => {
-          return <MonsterCard index={index} monster={monster} />;
+          return <MonsterCard key={index} index={index} monster={monster} />;
         })}
       </Container>
     </Box>
-  ) : null;
+  );
 }

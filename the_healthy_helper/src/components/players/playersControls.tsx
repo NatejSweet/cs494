@@ -41,16 +41,20 @@ export default function PlayersControls() {
   };
 
   return user ? (
-    <Box sx={{ width: "100%" }}>
+    <Box sx={{ width: "100%", justifyContent: "space-evenly" }}>
       <Button
+        sx={{ margin: "5px" }}
         onClick={() => {
           handleEdit();
         }}
+        variant="contained"
       >
         {editPlayers ? "Done" : "Edit"}
       </Button>
       {editPlayers ? (
         <Button
+          sx={{ margin: "5px" }}
+          variant="contained"
           onClick={() => {
             setPlayers([
               ...players!,
@@ -68,6 +72,7 @@ export default function PlayersControls() {
         </Button>
       ) : (
         <Button
+          variant="contained"
           onClick={() => {
             handleResetHealth();
           }}

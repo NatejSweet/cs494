@@ -1,4 +1,11 @@
-import { Box, Card, Typography, TextField, Button } from "@mui/material";
+import {
+  Box,
+  Card,
+  Typography,
+  TextField,
+  Button,
+  IconButton,
+} from "@mui/material";
 import { useUserContext } from "../context/userContextProvider";
 import { useState } from "react";
 
@@ -9,6 +16,15 @@ export default function DiceColumn() {
   const [rollValues, setRollValues] = useState<number[]>([
     0, 0, 0, 0, 0, 0, 0, 0,
   ]);
+  const [total, setTotal] = useState<number>(0);
+
+  const calculateTotal = () => {
+    let sum = 0;
+    for (let i = 0; i < rollValues.length; i++) {
+      sum += rollValues[i];
+    }
+    setTotal(sum);
+  };
 
   const handleNumDiceChange = (
     e: React.ChangeEvent<HTMLInputElement>,
@@ -46,6 +62,7 @@ export default function DiceColumn() {
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
+        height: "auto",
       }}
     >
       {diceSizes.map((size, index) => (
@@ -58,26 +75,29 @@ export default function DiceColumn() {
             width: "auto",
             border: "1px solid black",
             margin: "5px",
+            alignItems: "center",
+            justifyContent: "space-between",
           }}
           key={index}
         >
-          <Box
-            sx={{
-              justifyContent: "center",
-              alignItems: "center",
-              width: "50px",
-            }}
-          >
-            <Typography sx={{ height: "100%", alignContent: "center" }}>
-              d{size}
-            </Typography>
-          </Box>
           <TextField
             id="outlined-number"
             value={numDice[index]}
-            label="Num Rolls"
             type="number"
-            sx={{ width: "fit-content" }}
+            size="small"
+            sx={{
+              minwidth: "15%",
+              flexGrow: 1,
+              maxWidth: "30%",
+              "& input[type=number]::-webkit-inner-spin-button": {
+                WebkitAppearance: "none",
+                margin: 0,
+              },
+              "& input[type=number]::-webkit-outer-spin-button": {
+                WebkitAppearance: "none",
+                margin: 0,
+              },
+            }}
             onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
               handleNumDiceChange(event, index)
             }
@@ -85,30 +105,88 @@ export default function DiceColumn() {
               shrink: true,
             }}
           />
-          <Button variant="contained" onClick={handleRoll(index)}>
-            Roll
-          </Button>
           <Box
             sx={{
-              justifyContent: "center",
-              alignItems: "center",
-              width: "50px",
+              display: "flex",
+              height: "100%",
             }}
           >
-            <Typography sx={{ height: "100%", alignContent: "center" }}>
-              {rollValues[index]}
+            <Typography
+              sx={{ height: "100%", alignContent: "left", width: "10%" }}
+            >
+              d{size}
             </Typography>
           </Box>
           <Button
             variant="contained"
-            onClick={() => {
-              resetRoll(index);
+            onClick={handleRoll(index)}
+            size="small"
+            sx={{
+              margin: "5px",
+              width: "20%",
+              padding: 0,
             }}
           >
-            X
+            Roll
           </Button>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              height: "100%",
+            }}
+          >
+            <Typography
+              sx={{
+                height: "100%",
+                alignContent: "center",
+                width: "auto",
+                border: "1px solid black",
+                padding: "3px",
+              }}
+            >
+              {rollValues[index]}
+            </Typography>
+          </Box>
+          <IconButton
+            onClick={() => resetRoll(index)}
+            sx={{ padding: 0, margin: "5px" }}
+            size="small"
+          >
+            {" "}
+            X
+          </IconButton>
         </Card>
       ))}
+      <Card
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          padding: "5px",
+          height: "auto",
+          width: "auto",
+          border: "1px solid black",
+          margin: "5px",
+          alignItems: "center",
+          justifyContent: "space-evenly",
+        }}
+      >
+        <Button variant="contained" onClick={calculateTotal}>
+          {" "}
+          Calculate Total:{" "}
+        </Button>
+        <Typography
+          sx={{
+            height: "100%",
+            alignContent: "center",
+            width: "auto",
+            margin: "10px",
+          }}
+        >
+          {total}
+        </Typography>
+      </Card>
     </Box>
   );
 }

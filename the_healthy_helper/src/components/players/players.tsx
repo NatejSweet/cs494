@@ -1,7 +1,7 @@
 import { usePlayersContext } from "../../context/playerContextProvider";
 import { useUserContext } from "../../context/userContextProvider";
 import { Player } from "../../types/player";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import EditablePlayerCard from "./editablePlayerCard";
 import PlayerCard from "./playerCard";
 import PlayersControls from "./playersControls"; // Add the import statement for PlayersControls
@@ -37,7 +37,17 @@ export default function Players() {
             );
           })}
         </Box>
-      ) : null}
+      ) : (
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            height: "100%",
+          }}
+        >
+          <Typography variant="h5">Please log in to use players</Typography>
+        </Box>
+      )}
     </>
   );
 }

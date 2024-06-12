@@ -32,10 +32,11 @@ export default function MonsterForm() {
       sx={{
         display: "flex",
         flexDirection: "row",
-        padding: "auto",
+        padding: "5px",
         width: "auto",
         margin: "5px",
         justifyContent: "space-between",
+        border: "1px solid black",
       }}
     >
       <TextField
