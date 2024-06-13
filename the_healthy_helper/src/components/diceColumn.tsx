@@ -91,6 +91,7 @@ export default function DiceColumn() {
               minwidth: "15%",
               flexGrow: 1,
               maxWidth: "30%",
+              padding: 0,
               "& input[type=number]::-webkit-inner-spin-button": {
                 WebkitAppearance: "none",
                 margin: 0,
@@ -98,6 +99,9 @@ export default function DiceColumn() {
               "& input[type=number]::-webkit-outer-spin-button": {
                 WebkitAppearance: "none",
                 margin: 0,
+              },
+              "& input[type=number]": {
+                "-moz-appearance": "textfield",
               },
             }}
             InputLabelProps={{

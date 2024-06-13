@@ -33,7 +33,7 @@ export default function Home() {
           >
             <Box
               sx={{
-                width: "15%",
+                width: "18%",
                 height: "100%",
                 padding: 0,
                 margin: "3px",
@@ -56,7 +56,7 @@ export default function Home() {
             </Box>
             <Box
               sx={{
-                width: "30%",
+                width: "27%",
                 height: "100%",
                 padding: 0,
                 margin: "3px",
