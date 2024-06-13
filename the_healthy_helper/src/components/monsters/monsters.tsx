@@ -18,6 +18,7 @@ export default function Monsters() {
           display: "grid",
           gridTemplateColumns: "repeat(3, 1fr)",
           gridRowGap: "10px",
+          gridColumnGap: "5px",
           alignItems: "start",
         }}
       >

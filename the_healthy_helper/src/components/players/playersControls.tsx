@@ -41,9 +41,20 @@ export default function PlayersControls() {
   };
 
   return user ? (
-    <Box sx={{ width: "100%", justifyContent: "space-evenly" }}>
+    <Box
+      sx={{
+        width: "100%",
+        justifyContent: "space-evenly",
+      }}
+    >
       <Button
-        sx={{ margin: "5px" }}
+        sx={{
+          margin: "5px",
+          color: "#ededed",
+          backgroundColor: "#0a4a44",
+          borderColor: "#0a4a44",
+          "&:hover": { backgroundColor: "#09665d" },
+        }}
         onClick={() => {
           handleEdit();
         }}
@@ -53,7 +64,13 @@ export default function PlayersControls() {
       </Button>
       {editPlayers ? (
         <Button
-          sx={{ margin: "5px" }}
+          sx={{
+            margin: "5px",
+            color: "#ededed",
+            backgroundColor: "#0a4a44",
+            borderColor: "#0a4a44",
+            "&:hover": { backgroundColor: "#09665d" },
+          }}
           variant="contained"
           onClick={() => {
             setPlayers([
@@ -73,6 +90,12 @@ export default function PlayersControls() {
       ) : (
         <Button
           variant="contained"
+          sx={{
+            color: "#ededed",
+            backgroundColor: "#0a4a44",
+            borderColor: "#0a4a44",
+            "&:hover": { backgroundColor: "#09665d" },
+          }}
           onClick={() => {
             handleResetHealth();
           }}

@@ -19,7 +19,12 @@ const Login = () => {
     <Box sx={{ width: "100%", margin: "auto" }}>
       {user ? (
         <Button
-          sx={{ border: "1px solid #000" }}
+          sx={{
+            color: "#ededed",
+            backgroundColor: "#0a4a44",
+            borderColor: "#0a4a44",
+            "&:hover": { backgroundColor: "#09665d" },
+          }}
           variant="contained"
           onClick={handleLogOut}
         >
@@ -27,7 +32,13 @@ const Login = () => {
         </Button>
       ) : (
         <Button
-          sx={{ border: "1px solid #000", margin: "auto" }}
+          sx={{
+            margin: "auto",
+            color: "#ededed",
+            backgroundColor: "#0a4a44",
+            borderColor: "#0a4a44",
+            "&:hover": { backgroundColor: "#09665d" },
+          }}
           variant="contained"
           onClick={handleGoogleSignIn}
         >

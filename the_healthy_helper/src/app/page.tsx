@@ -20,54 +20,52 @@ export default function Home() {
     <UserContextProvider>
       <PlayersContextProvider>
         <MonstersContextProvider>
-          <main>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-between",
+              padding: "3px",
+              margin: 0,
+              width: "100%",
+              height: "100vh",
+            }}
+          >
             <Box
               sx={{
-                display: "flex",
-                flexDirection: "row",
-                justifyContent: "space-between",
-                padding: "3px",
-                margin: 0,
-                width: "100%",
-                height: "100vh",
+                width: "15%",
+                height: "100%",
+                padding: 0,
+                margin: "3px",
+                overflowY: "auto",
               }}
             >
-              <Box
-                sx={{
-                  width: "15%",
-                  height: "100%",
-                  padding: 0,
-                  margin: "3px",
-                  overflowY: "auto",
-                }}
-              >
-                <Login />
-                <DiceColumn />
-              </Box>
-              <Box
-                sx={{
-                  width: "55%",
-                  height: "100%",
-                  padding: 0,
-                  margin: "3px",
-                  overflowY: "auto",
-                }}
-              >
-                <Monsters />
-              </Box>
-              <Box
-                sx={{
-                  width: "30%",
-                  height: "100%",
-                  padding: 0,
-                  margin: "3px",
-                  overflowY: "auto",
-                }}
-              >
-                <Players />
-              </Box>
+              <Login />
+              <DiceColumn />
             </Box>
-          </main>
+            <Box
+              sx={{
+                width: "55%",
+                height: "100%",
+                padding: 0,
+                margin: "3px",
+                overflowY: "auto",
+              }}
+            >
+              <Monsters />
+            </Box>
+            <Box
+              sx={{
+                width: "30%",
+                height: "100%",
+                padding: 0,
+                margin: "3px",
+                overflowY: "auto",
+              }}
+            >
+              <Players />
+            </Box>
+          </Box>
         </MonstersContextProvider>
       </PlayersContextProvider>
     </UserContextProvider>

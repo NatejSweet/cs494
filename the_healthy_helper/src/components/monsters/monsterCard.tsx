@@ -57,11 +57,13 @@ export default function MonsterCard(props: {
         padding: "5px",
         height: "auto",
         margin: "5px",
-        border: "1px solid black",
         width: "95%",
+        border: "2px solid #3A506B",
+        backgroundColor: "#333333",
+        borderRadius: "5px",
       }}
     >
-      <Typography component="div" variant="h6">
+      <Typography component="div" variant="h6" sx={{ color: "#ededed" }}>
         Name: {props.monster.name}
       </Typography>
       <Box sx={{ display: "flex", flexDirection: "row", width: "100%" }}>
@@ -76,11 +78,13 @@ export default function MonsterCard(props: {
             width: "40%",
           }}
         >
-          <Typography component="div">Armor: {props.monster.armor}</Typography>
-          <Typography component="div">
+          <Typography component="div" sx={{ color: "#ededed" }}>
+            Armor: {props.monster.armor}
+          </Typography>
+          <Typography component="div" sx={{ color: "#ededed" }}>
             Max HP: {props.monster.maxHealth}
           </Typography>
-          <Typography component="div">
+          <Typography component="div" sx={{ color: "#ededed" }}>
             Current HP: {props.monster.currentHealth}
           </Typography>
         </Box>
@@ -99,7 +103,22 @@ export default function MonsterCard(props: {
                 value="plus"
                 selected={toggleAddSubButtons}
                 onClick={handlePlusClick}
-                sx={{ width: "50%", margin: "3px" }}
+                sx={{
+                  width: "50%",
+                  margin: "3px",
+                  color: "#ededed",
+                  backgroundColor: "#07332f",
+                  borderColor: "#0a4a44",
+                  "&:hover": { backgroundColor: "#09665d" },
+                  "&.Mui-selected": {
+                    backgroundColor: "#09665d",
+                    color: "#ededed",
+                  },
+                  "&.Mui-selected:hover": {
+                    backgroundColor: "#09665d",
+                    color: "#ededed",
+                  },
+                }}
               >
                 +
               </ToggleButton>
@@ -107,7 +126,22 @@ export default function MonsterCard(props: {
                 value="minus"
                 selected={!toggleAddSubButtons}
                 onClick={handleMinusClick}
-                sx={{ width: "50%", margin: "3px" }}
+                sx={{
+                  width: "50%",
+                  margin: "3px",
+                  color: "#ededed",
+                  backgroundColor: "#07332f",
+                  borderColor: "#0a4a44",
+                  "&:hover": { backgroundColor: "#09665d" },
+                  "&.Mui-selected": {
+                    backgroundColor: "#09665d",
+                    color: "#ededed",
+                  },
+                  "&.Mui-selected:hover": {
+                    backgroundColor: "#09665d",
+                    color: "#ededed",
+                  },
+                }}
               >
                 -
               </ToggleButton>
@@ -130,6 +164,10 @@ export default function MonsterCard(props: {
                 margin: "3px",
                 height: "90%",
                 minWidth: "50px",
+                color: "#ededed",
+                backgroundColor: "#0a4a44",
+                borderColor: "#0a4a44",
+                "&:hover": { backgroundColor: "#09665d" },
               }}
               onClick={handleApplyClick}
             >
@@ -142,6 +180,13 @@ export default function MonsterCard(props: {
               onChange={(e) => setNumChange(Number(e.target.value))}
               variant="outlined"
               sx={{ flexGrow: 4, flexShrink: 1, width: "80%", margin: "3px" }}
+              InputLabelProps={{
+                shrink: true,
+                style: { color: "#ededed" },
+              }}
+              InputProps={{
+                style: { color: "#ededed", borderColor: "#3A506B" },
+              }}
             />
           </Box>
         </Box>

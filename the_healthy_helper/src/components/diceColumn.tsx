@@ -73,10 +73,12 @@ export default function DiceColumn() {
             padding: "5px",
             height: "auto",
             width: "auto",
-            border: "1px solid black",
             margin: "5px",
             alignItems: "center",
             justifyContent: "space-between",
+            border: "2px solid #3A506B",
+            backgroundColor: "#333333",
+            borderRadius: "5px",
           }}
           key={index}
         >
@@ -98,12 +100,16 @@ export default function DiceColumn() {
                 margin: 0,
               },
             }}
+            InputLabelProps={{
+              shrink: true,
+              style: { color: "#ededed" },
+            }}
+            InputProps={{
+              style: { color: "#ededed", borderColor: "#3A506B" },
+            }}
             onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
               handleNumDiceChange(event, index)
             }
-            InputLabelProps={{
-              shrink: true,
-            }}
           />
           <Box
             sx={{
@@ -112,7 +118,12 @@ export default function DiceColumn() {
             }}
           >
             <Typography
-              sx={{ height: "100%", alignContent: "left", width: "10%" }}
+              sx={{
+                height: "100%",
+                alignContent: "left",
+                width: "10%",
+                color: "#ededed",
+              }}
             >
               d{size}
             </Typography>
@@ -122,9 +133,13 @@ export default function DiceColumn() {
             onClick={handleRoll(index)}
             size="small"
             sx={{
+              flexShrink: 1,
               margin: "5px",
-              width: "20%",
-              padding: 0,
+              width: "15%",
+              color: "#ededed",
+              backgroundColor: "#0a4a44",
+              borderColor: "#0a4a44",
+              "&:hover": { backgroundColor: "#09665d" },
             }}
           >
             Roll
@@ -142,7 +157,8 @@ export default function DiceColumn() {
                 height: "100%",
                 alignContent: "center",
                 width: "auto",
-                border: "1px solid black",
+                border: "2px solid #3A506B",
+                color: "#ededed",
                 padding: "3px",
               }}
             >
@@ -151,7 +167,7 @@ export default function DiceColumn() {
           </Box>
           <IconButton
             onClick={() => resetRoll(index)}
-            sx={{ padding: 0, margin: "5px" }}
+            sx={{ padding: 0, margin: "3px", color: "#ededed" }}
             size="small"
           >
             {" "}
@@ -166,13 +182,24 @@ export default function DiceColumn() {
           padding: "5px",
           height: "auto",
           width: "auto",
-          border: "1px solid black",
           margin: "5px",
           alignItems: "center",
           justifyContent: "space-evenly",
+          border: "2px solid #3A506B",
+          backgroundColor: "#333333",
+          borderRadius: "5px",
         }}
       >
-        <Button variant="contained" onClick={calculateTotal}>
+        <Button
+          variant="contained"
+          onClick={calculateTotal}
+          sx={{
+            color: "#ededed",
+            backgroundColor: "#0a4a44",
+            borderColor: "#0a4a44",
+            "&:hover": { backgroundColor: "#09665d" },
+          }}
+        >
           {" "}
           Calculate Total:{" "}
         </Button>
@@ -181,7 +208,8 @@ export default function DiceColumn() {
             height: "100%",
             alignContent: "center",
             width: "auto",
-            margin: "10px",
+            margin: "5px",
+            color: "#ededed",
           }}
         >
           {total}

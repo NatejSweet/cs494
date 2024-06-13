@@ -36,7 +36,9 @@ export default function MonsterForm() {
         width: "auto",
         margin: "5px",
         justifyContent: "space-between",
-        border: "1px solid black",
+        border: "2px solid #3A506B",
+        backgroundColor: "#333333",
+        borderRadius: "5px",
       }}
     >
       <TextField
@@ -47,7 +49,12 @@ export default function MonsterForm() {
         onChange={(e) => setHp(Number(e.target.value))}
         InputLabelProps={{
           shrink: true,
+          style: { color: "#ededed" },
         }}
+        InputProps={{
+          style: { color: "#ededed", borderColor: "#3A506B" },
+        }}
+        variant="outlined"
       />
       <TextField
         id="outlined-number"
@@ -57,7 +64,12 @@ export default function MonsterForm() {
         onChange={(e) => setArmor(Number(e.target.value))}
         InputLabelProps={{
           shrink: true,
+          style: { color: "#ededed", borderColor: "#3A506B" },
         }}
+        InputProps={{
+          style: { color: "#ededed", borderColor: "#3A506B" },
+        }}
+        variant="outlined"
       />
       <TextField
         id="outlined-number"
@@ -67,9 +79,23 @@ export default function MonsterForm() {
         onChange={(e) => setNumberToSpawn(Number(e.target.value))}
         InputLabelProps={{
           shrink: true,
+          style: { color: "#ededed", borderColor: "#3A506B" },
         }}
+        InputProps={{
+          style: { color: "#ededed", borderColor: "#3A506B" },
+        }}
+        variant="outlined"
       />
-      <Button variant="contained" onClick={handleAddMonsters}>
+      <Button
+        sx={{
+          color: "#ededed",
+          backgroundColor: "#0a4a44",
+          borderColor: "#0a4a44",
+          "&:hover": { backgroundColor: "#09665d" },
+        }}
+        variant="contained"
+        onClick={handleAddMonsters}
+      >
         Add Monsters
       </Button>
     </Box>

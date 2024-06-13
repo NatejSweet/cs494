@@ -45,7 +45,9 @@ export default function Players() {
             height: "100%",
           }}
         >
-          <Typography variant="h5">Please log in to use players</Typography>
+          <Typography variant="h5" sx={{ color: "ededed" }}>
+            Please log in to use players
+          </Typography>
         </Box>
       )}
     </>

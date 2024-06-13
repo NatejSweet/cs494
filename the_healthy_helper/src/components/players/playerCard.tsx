@@ -72,11 +72,13 @@ export default function PlayerCard(props: { player: Player; index: number }) {
         margin: 0,
         marginTop: "5px",
         marginBottom: "5px",
-        border: "1px solid black",
         width: "99%",
+        border: "2px solid #3A506B",
+        backgroundColor: "#333333",
+        borderRadius: "5px",
       }}
     >
-      <Typography component="div" variant="h6">
+      <Typography component="div" variant="h6" sx={{ color: "#ededed" }}>
         Name: {props.player.name}
       </Typography>
       <Box sx={{ display: "flex", flexDirection: "row", width: "100%" }}>
@@ -91,14 +93,16 @@ export default function PlayerCard(props: { player: Player; index: number }) {
             width: "50%",
           }}
         >
-          <Typography component="div">Armor: {props.player.armor}</Typography>
-          <Typography component="div">
+          <Typography component="div" sx={{ color: "#ededed" }}>
+            Armor: {props.player.armor}
+          </Typography>
+          <Typography component="div" sx={{ color: "#ededed" }}>
             Max HP: {props.player.maxHealth}
           </Typography>
-          <Typography component="div">
+          <Typography component="div" sx={{ color: "#ededed" }}>
             Temp HP: {props.player.tmpHealth}
           </Typography>
-          <Typography component="div">
+          <Typography component="div" sx={{ color: "#ededed" }}>
             Current HP: {props.player.currentHealth}
           </Typography>
         </Box>
@@ -114,7 +118,22 @@ export default function PlayerCard(props: { player: Player; index: number }) {
           >
             <ButtonGroup>
               <ToggleButton
-                sx={{ width: "50%", margin: "3px" }}
+                sx={{
+                  width: "50%",
+                  margin: "3px",
+                  color: "#ededed",
+                  backgroundColor: "#07332f",
+                  borderColor: "#0a4a44",
+                  "&:hover": { backgroundColor: "#09665d" },
+                  "&.Mui-selected": {
+                    backgroundColor: "#09665d",
+                    color: "#ededed",
+                  },
+                  "&.Mui-selected:hover": {
+                    backgroundColor: "#09665d",
+                    color: "#ededed",
+                  },
+                }}
                 value="plus"
                 selected={toggleAddSubButtons}
                 onClick={handlePlusClick}
@@ -122,7 +141,22 @@ export default function PlayerCard(props: { player: Player; index: number }) {
                 +
               </ToggleButton>
               <ToggleButton
-                sx={{ width: "50%", margin: "3px" }}
+                sx={{
+                  width: "50%",
+                  margin: "3px",
+                  color: "#ededed",
+                  backgroundColor: "#07332f",
+                  borderColor: "#0a4a44",
+                  "&:hover": { backgroundColor: "#09665d" },
+                  "&.Mui-selected": {
+                    backgroundColor: "#09665d",
+                    color: "#ededed",
+                  },
+                  "&.Mui-selected:hover": {
+                    backgroundColor: "#09665d",
+                    color: "#ededed",
+                  },
+                }}
                 value="minus"
                 selected={!toggleAddSubButtons}
                 onClick={handleMinusClick}
@@ -142,7 +176,22 @@ export default function PlayerCard(props: { player: Player; index: number }) {
           >
             <ButtonGroup>
               <ToggleButton
-                sx={{ width: "50%", margin: "3px" }}
+                sx={{
+                  width: "50%",
+                  margin: "3px",
+                  backgroundColor: "#07332f",
+                  borderColor: "#0a4a44",
+                  color: "#ededed",
+                  "&:hover": { backgroundColor: "#09665d" },
+                  "&.Mui-selected": {
+                    backgroundColor: "#09665d",
+                    color: "#ededed",
+                  },
+                  "&.Mui-selected:hover": {
+                    backgroundColor: "#09665d",
+                    color: "#ededed",
+                  },
+                }}
                 value="max"
                 selected={toggleMaxTempButtons}
                 onClick={handleMaxClick}
@@ -150,7 +199,22 @@ export default function PlayerCard(props: { player: Player; index: number }) {
                 max
               </ToggleButton>
               <ToggleButton
-                sx={{ width: "50%", margin: "3px" }}
+                sx={{
+                  width: "50%",
+                  margin: "3px",
+                  backgroundColor: "#07332f",
+                  borderColor: "#0a4a44",
+                  color: "#ededed",
+                  "&:hover": { backgroundColor: "#09665d" },
+                  "&.Mui-selected": {
+                    backgroundColor: "#09665d",
+                    color: "#ededed",
+                  },
+                  "&.Mui-selected:hover": {
+                    backgroundColor: "#09665d",
+                    color: "#ededed",
+                  },
+                }}
                 value="temp"
                 selected={!toggleMaxTempButtons}
                 disabled={isTmpButtonDisabled}
@@ -170,7 +234,15 @@ export default function PlayerCard(props: { player: Player; index: number }) {
           >
             <Button
               variant="contained"
-              sx={{ width: "30%", margin: "3px", height: "90%" }}
+              sx={{
+                width: "30%",
+                margin: "3px",
+                height: "90%",
+                color: "#ededed",
+                backgroundColor: "#0a4a44",
+                borderColor: "#0a4a44",
+                "&:hover": { backgroundColor: "#09665d" },
+              }}
               onClick={handleApplyClick}
             >
               Apply
@@ -182,6 +254,13 @@ export default function PlayerCard(props: { player: Player; index: number }) {
               onChange={(e) => setNumChange(Number(e.target.value))}
               variant="outlined"
               sx={{ width: "70%", margin: "3px" }}
+              InputLabelProps={{
+                shrink: true,
+                style: { color: "#ededed" },
+              }}
+              InputProps={{
+                style: { color: "#ededed", borderColor: "#3A506B" },
+              }}
             />
           </Box>
         </Box>

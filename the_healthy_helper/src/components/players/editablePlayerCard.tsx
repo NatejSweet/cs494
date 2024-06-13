@@ -31,7 +31,9 @@ export default function EditablePlayerCard(props: {
         marginRight: 0,
         marginLeft: "auto",
         width: "99%",
-        border: "1px solid black",
+        border: "2px solid #3A506B",
+        backgroundColor: "#333333",
+        borderRadius: "5px",
       }}
     >
       <Box
@@ -39,7 +41,7 @@ export default function EditablePlayerCard(props: {
           display: "flex",
           flexDirection: "column",
           "& .MuiTextField-root": { m: 1, width: "15ch" },
-          width: "50%",
+          width: "75%",
         }}
       >
         <TextField
@@ -49,6 +51,13 @@ export default function EditablePlayerCard(props: {
             handleNameChange(props.index, event)
           }
           sx={{ minWidth: "100%" }}
+          InputLabelProps={{
+            shrink: true,
+            style: { color: "#ededed" },
+          }}
+          InputProps={{
+            style: { color: "#ededed", borderColor: "#3A506B" },
+          }}
         />
         <TextField
           label="Armor"
@@ -57,6 +66,13 @@ export default function EditablePlayerCard(props: {
             handleArmorChange(props.index, event)
           }
           sx={{ minWidth: "100%" }}
+          InputLabelProps={{
+            shrink: true,
+            style: { color: "#ededed" },
+          }}
+          InputProps={{
+            style: { color: "#ededed", borderColor: "#3A506B" },
+          }}
         />
         <TextField
           label="Max Health"
@@ -65,26 +81,37 @@ export default function EditablePlayerCard(props: {
             handleMaxHealthChange(props.index, event)
           }
           sx={{ minWidth: "100%" }}
+          InputLabelProps={{
+            shrink: true,
+            style: { color: "#ededed" },
+          }}
+          InputProps={{
+            style: { color: "#ededed", borderColor: "#3A506B" },
+          }}
         />
       </Box>
       <Box
         sx={{
-          width: "50%",
+          width: "25%",
+          position: "relative",
         }}
       >
         <Button
           onClick={() => {
             handleRemovePlayer(props.index);
           }}
+          sx={{
+            color: "#ededed",
+            backgroundColor: "#0a4a44",
+            borderColor: "#0a4a44",
+            "&:hover": { backgroundColor: "#09665d" },
+            position: "absolute",
+            top: "10px",
+            right: "10px",
+          }}
         >
           Delete
         </Button>
-        <CardMedia
-          component="img"
-          sx={{ maxWidth: "30%", maxHeight: "70%" }}
-          image="#"
-          alt="playerPhoto"
-        />
       </Box>
     </Card>
   );
